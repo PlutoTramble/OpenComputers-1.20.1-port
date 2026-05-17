@@ -25,7 +25,7 @@ class PowerConverter(selfType: BlockEntityType[_ <: PowerConverter], pos: BlockP
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Power,
     DeviceAttribute.Description -> "Power converter",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Transgizer-PX5",
     DeviceAttribute.Capacity -> energyThroughput.toString
   )

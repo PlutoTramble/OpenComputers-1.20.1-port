@@ -16,7 +16,7 @@ class Cable(selfType: BlockEntityType[_ <: Cable], pos: BlockPos, state: BlockSt
   setColor(Color.rgbValues(DyeColor.LIGHT_GRAY))
 
   def createItemStack() = {
-    val stack = api.Items.get(Constants.BlockName.Cable).createItemStack(1)
+    val stack = api.Items.get(Constants.BlockName.CABLE).createItemStack(1)
     if (getColor != Color.rgbValues(DyeColor.LIGHT_GRAY)) {
       ItemColorizer.setColor(stack, getColor)
     }

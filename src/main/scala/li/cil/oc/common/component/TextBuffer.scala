@@ -111,7 +111,7 @@ class TextBuffer(val host: EnvironmentHost) extends AbstractManagedEnvironment w
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Display,
     DeviceAttribute.Description -> "Text buffer",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Text Screen V0",
     DeviceAttribute.Capacity -> (maxResolution._1 * maxResolution._2).toString,
     DeviceAttribute.Width -> Array("1", "4", "8").apply(maxDepth.ordinal())
@@ -732,7 +732,7 @@ object TextBuffer {
       ClientPacketSender.sendCopyToAnalyzer(nodeAddress, line)
     }
 
-    private lazy val Debugger = api.Items.get(Constants.ItemName.Debugger)
+    private lazy val Debugger = api.Items.get(Constants.ItemName.DEBUGGER)
 
     private def debug(message: String) {
       if (Minecraft.getInstance != null && Minecraft.getInstance.player != null && api.Items.get(Minecraft.getInstance.player.getItemInHand(InteractionHand.MAIN_HAND)) == Debugger) {

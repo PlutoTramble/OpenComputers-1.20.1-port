@@ -52,7 +52,7 @@ class InternetCard extends AbstractManagedEnvironment with DeviceInfo {
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Communication,
     DeviceAttribute.Description -> "Internet modem",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "SuperLink X-D4NK"
   )
 

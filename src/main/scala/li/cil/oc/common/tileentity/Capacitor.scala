@@ -27,7 +27,7 @@ class Capacitor(selfType: BlockEntityType[_ <: Capacitor], pos: BlockPos, state:
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Power,
     DeviceAttribute.Description -> "Battery",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "CapBank3x",
     DeviceAttribute.Capacity -> maxCapacity.toString
   )

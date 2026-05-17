@@ -70,7 +70,7 @@ class ControllerImpl(val player: Player) extends Controller with WirelessEndpoin
             case Array("getPowerState") =>
               respond(sender, "power", getLocalBuffer, getLocalBufferSize)
             case Array("saveConfiguration") =>
-              val nanomachines = api.Items.get(Constants.ItemName.Nanomachines)
+              val nanomachines = api.Items.get(Constants.ItemName.NANOMACHINES)
               try {
                 val index = player.inventory.items.indexWhere(stack => api.Items.get(stack) == nanomachines && new NanomachineData(stack).configuration.isEmpty)
                 if (index >= 0) {

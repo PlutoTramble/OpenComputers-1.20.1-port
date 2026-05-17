@@ -21,7 +21,7 @@ class CPU(val tier: Int) extends AbstractManagedEnvironment with DeviceInfo {
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Processor,
     DeviceAttribute.Description -> "CPU",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> ("FlexiArch " + (tier + 1).toString + " Processor"),
     DeviceAttribute.Clock -> (Settings.get.callBudgets(tier) * 1000).toInt.toString
   )

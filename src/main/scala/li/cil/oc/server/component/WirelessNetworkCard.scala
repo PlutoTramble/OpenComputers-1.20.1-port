@@ -152,7 +152,7 @@ object WirelessNetworkCard {
     private final lazy val deviceInfo = Map(
       DeviceAttribute.Class -> DeviceClass.Network,
       DeviceAttribute.Description -> "Wireless ethernet controller",
-      DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+      DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
       DeviceAttribute.Product -> "39i110 (LPPW-01)",
       DeviceAttribute.Version -> "1.0",
       DeviceAttribute.Capacity -> Settings.get.maxNetworkPacketSize.toString,
@@ -186,7 +186,7 @@ object WirelessNetworkCard {
     private final lazy val deviceInfo = Map(
       DeviceAttribute.Class -> DeviceClass.Network,
       DeviceAttribute.Description -> "Wireless ethernet controller",
-      DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+      DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
       DeviceAttribute.Product -> "62i230 (MPW-01)",
       DeviceAttribute.Version -> "2.0",
       DeviceAttribute.Capacity -> Settings.get.maxNetworkPacketSize.toString,

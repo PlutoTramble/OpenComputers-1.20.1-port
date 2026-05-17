@@ -25,7 +25,7 @@ class NetSplitter(selfType: BlockEntityType[_ <: NetSplitter], pos: BlockPos, st
   private lazy val deviceInfo: util.Map[String, String] = Map(
     DeviceAttribute.Class -> DeviceClass.Network,
     DeviceAttribute.Description -> "Ethernet controller",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "NetSplits",
     DeviceAttribute.Version -> "1.0",
     DeviceAttribute.Width -> "6"

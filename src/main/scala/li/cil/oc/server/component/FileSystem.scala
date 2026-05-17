@@ -45,7 +45,7 @@ class FileSystem(val fileSystem: IFileSystem, var label: Label, val host: Option
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Volume,
     DeviceAttribute.Description -> "Filesystem",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "MPFS.21.6",
     DeviceAttribute.Capacity -> (fileSystem.spaceTotal * 1.024).toInt.toString,
     DeviceAttribute.Size -> fileSystem.spaceTotal.toString,

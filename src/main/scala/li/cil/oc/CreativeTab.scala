@@ -5,7 +5,7 @@ import net.minecraft.core.NonNullList
 import net.minecraft.world.item.{CreativeModeTab, ItemStack}
 
 object CreativeTab extends CreativeModeTab(OpenComputers.Name) {
-  private lazy val stack = api.Items.get(Constants.BlockName.CaseTier1).createItemStack(1)
+  private lazy val stack = api.Items.get(Constants.BlockName.CASE_TIER_1).createItemStack(1)
 
   override def makeIcon: ItemStack = stack
 

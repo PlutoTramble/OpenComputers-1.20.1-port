@@ -7,7 +7,7 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.nbt.Tag
 
-class RaidData extends ItemData(Constants.BlockName.Raid) {
+class RaidData extends ItemData(Constants.BlockName.RAID) {
   def this(stack: ItemStack) {
     this()
     loadData(stack)

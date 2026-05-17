@@ -6,7 +6,7 @@ import net.minecraft.nbt.CompoundTag
 import net.minecraft.world.item.{ItemStack, MapItem}
 import net.minecraft.world.level.Level
 
-class NavigationUpgradeData extends ItemData(Constants.ItemName.NavigationUpgrade) {
+class NavigationUpgradeData extends ItemData(Constants.ItemName.NAVIGATION_UPGRADE) {
   def this(stack: ItemStack) {
     this()
     loadData(stack)

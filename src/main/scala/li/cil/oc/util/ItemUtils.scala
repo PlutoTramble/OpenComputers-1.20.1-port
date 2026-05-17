@@ -37,23 +37,23 @@ object ItemUtils {
 
   def caseTier(stack: ItemStack): Int = {
     val descriptor = api.Items.get(stack)
-    if (descriptor == api.Items.get(Constants.BlockName.CaseTier1)) Tier.One
-    else if (descriptor == api.Items.get(Constants.BlockName.CaseTier2)) Tier.Two
-    else if (descriptor == api.Items.get(Constants.BlockName.CaseTier3)) Tier.Three
-    else if (descriptor == api.Items.get(Constants.BlockName.CaseCreative)) Tier.Four
-    else if (descriptor == api.Items.get(Constants.ItemName.MicrocontrollerCaseTier1)) Tier.One
-    else if (descriptor == api.Items.get(Constants.ItemName.MicrocontrollerCaseTier2)) Tier.Two
-    else if (descriptor == api.Items.get(Constants.ItemName.MicrocontrollerCaseCreative)) Tier.Four
-    else if (descriptor == api.Items.get(Constants.ItemName.DroneCaseTier1)) Tier.One
-    else if (descriptor == api.Items.get(Constants.ItemName.DroneCaseTier2)) Tier.Two
-    else if (descriptor == api.Items.get(Constants.ItemName.DroneCaseCreative)) Tier.Four
-    else if (descriptor == api.Items.get(Constants.ItemName.ServerTier1)) Tier.One
-    else if (descriptor == api.Items.get(Constants.ItemName.ServerTier2)) Tier.Two
-    else if (descriptor == api.Items.get(Constants.ItemName.ServerTier3)) Tier.Three
-    else if (descriptor == api.Items.get(Constants.ItemName.ServerCreative)) Tier.Four
-    else if (descriptor == api.Items.get(Constants.ItemName.TabletCaseTier1)) Tier.One
-    else if (descriptor == api.Items.get(Constants.ItemName.TabletCaseTier2)) Tier.Two
-    else if (descriptor == api.Items.get(Constants.ItemName.TabletCaseCreative)) Tier.Four
+    if (descriptor == api.Items.get(Constants.BlockName.CASE_TIER_1)) Tier.One
+    else if (descriptor == api.Items.get(Constants.BlockName.CASE_TIER_2)) Tier.Two
+    else if (descriptor == api.Items.get(Constants.BlockName.CASE_TIER_3)) Tier.Three
+    else if (descriptor == api.Items.get(Constants.BlockName.CASE_CREATIVE)) Tier.Four
+    else if (descriptor == api.Items.get(Constants.ItemName.MICROCONTROLLER_CASE_TIER_1)) Tier.One
+    else if (descriptor == api.Items.get(Constants.ItemName.MICROCONTROLLER_CASE_TIER_2)) Tier.Two
+    else if (descriptor == api.Items.get(Constants.ItemName.MICROCONTROLLER_CASE_CREATIVE)) Tier.Four
+    else if (descriptor == api.Items.get(Constants.ItemName.DRONE_CASE_TIER_1)) Tier.One
+    else if (descriptor == api.Items.get(Constants.ItemName.DRONE_CASE_TIER_2)) Tier.Two
+    else if (descriptor == api.Items.get(Constants.ItemName.DRONE_CASE_CREATIVE)) Tier.Four
+    else if (descriptor == api.Items.get(Constants.ItemName.SERVER_TIER_1)) Tier.One
+    else if (descriptor == api.Items.get(Constants.ItemName.SERVER_TIER_2)) Tier.Two
+    else if (descriptor == api.Items.get(Constants.ItemName.SERVER_TIER_3)) Tier.Three
+    else if (descriptor == api.Items.get(Constants.ItemName.SERVER_CREATIVE)) Tier.Four
+    else if (descriptor == api.Items.get(Constants.ItemName.TABLET_CASE_TIER_1)) Tier.One
+    else if (descriptor == api.Items.get(Constants.ItemName.TABLET_CASE_TIER_2)) Tier.Two
+    else if (descriptor == api.Items.get(Constants.ItemName.TABLET_CASE_CREATIVE)) Tier.Four
     else Tier.None
   }
 

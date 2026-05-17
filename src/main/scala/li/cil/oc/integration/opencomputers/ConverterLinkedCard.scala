@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack
 import scala.collection.convert.ImplicitConversionsToScala._
 
 object ConverterLinkedCard extends Converter {
-  lazy val linkedCard: ItemInfo = api.Items.get(Constants.ItemName.LinkedCard)
+  lazy val linkedCard: ItemInfo = api.Items.get(Constants.ItemName.LINKED_CARD)
 
   override def convert(value: scala.Any, output: util.Map[AnyRef, AnyRef]): Unit = value match {
     case stack: ItemStack if api.Items.get(stack) == linkedCard =>

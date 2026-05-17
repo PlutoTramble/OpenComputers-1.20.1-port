@@ -13,7 +13,7 @@ import net.minecraft.world.item.ItemStack
 
 object DriverUpgradeExperience extends Item with HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.ExperienceUpgrade))
+    api.Items.get(Constants.ItemName.EXPERIENCE_UPGRADE))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     host match {

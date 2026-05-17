@@ -50,7 +50,7 @@ class Geolyzer(val host: EnvironmentHost) extends AbstractManagedEnvironment wit
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Geolyzer",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Terrain Analyzer MkII",
     DeviceAttribute.Capacity -> Settings.get.geolyzerRange.toString
   )

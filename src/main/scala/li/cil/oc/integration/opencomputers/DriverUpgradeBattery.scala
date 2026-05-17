@@ -12,9 +12,9 @@ import net.minecraft.world.item.ItemStack
 
 object DriverUpgradeBattery extends Item with HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.BatteryUpgradeTier1),
-    api.Items.get(Constants.ItemName.BatteryUpgradeTier2),
-    api.Items.get(Constants.ItemName.BatteryUpgradeTier3))
+    api.Items.get(Constants.ItemName.BATTERY_UPGRADE_TIER_1),
+    api.Items.get(Constants.ItemName.BATTERY_UPGRADE_TIER_2),
+    api.Items.get(Constants.ItemName.BATTERY_UPGRADE_TIER_3))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

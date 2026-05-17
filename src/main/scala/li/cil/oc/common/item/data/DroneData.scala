@@ -6,7 +6,7 @@ import li.cil.oc.util.ItemUtils
 import net.minecraft.world.item.ItemStack
 import net.minecraft.nbt.CompoundTag
 
-class DroneData extends MicrocontrollerData(Constants.ItemName.Drone) {
+class DroneData extends MicrocontrollerData(Constants.ItemName.DRONE) {
   def this(stack: ItemStack) = {
     this()
     loadData(stack)

@@ -11,7 +11,7 @@ import net.minecraft.world.phys.AABB
 import java.lang.reflect.Method
 import scala.collection.mutable
 
-class PrintData extends ItemData(Constants.BlockName.Print) {
+class PrintData extends ItemData(Constants.BlockName.PRINT) {
   def this(stack: ItemStack) {
     this()
     loadData(stack)
@@ -175,9 +175,9 @@ object PrintData {
   private val materialPerItem = Settings.get.printMaterialValue
 
   def materialValue(stack: ItemStack): Int = {
-    if (api.Items.get(stack) == api.Items.get(Constants.ItemName.Chamelium))
+    if (api.Items.get(stack) == api.Items.get(Constants.ItemName.CHAMELIUM))
       materialPerItem
-    else if (api.Items.get(stack) == api.Items.get(Constants.BlockName.Print)) {
+    else if (api.Items.get(stack) == api.Items.get(Constants.BlockName.PRINT)) {
       val data = new PrintData(stack)
       computeCosts(data) match {
         case Some((materialRequired, inkRequired)) => (materialRequired * Settings.get.printRecycleRate).toInt

@@ -19,9 +19,9 @@ import com.mojang.math.Vector3f
 import org.lwjgl.opengl.GL11
 
 object UpgradeRenderer {
-  lazy val craftingUpgrade = api.Items.get(Constants.ItemName.CraftingUpgrade)
-  lazy val generatorUpgrade = api.Items.get(Constants.ItemName.GeneratorUpgrade)
-  lazy val inventoryUpgrade = api.Items.get(Constants.ItemName.InventoryUpgrade)
+  lazy val craftingUpgrade = api.Items.get(Constants.ItemName.CRAFTING_UPGRADE)
+  lazy val generatorUpgrade = api.Items.get(Constants.ItemName.GENERATOR_UPGRADE)
+  lazy val inventoryUpgrade = api.Items.get(Constants.ItemName.INVENTORY_UPGRADE)
 
   def preferredMountPoint(stack: ItemStack, availableMountPoints: java.util.Set[String]): String = {
     val descriptor = api.Items.get(stack)
@@ -43,19 +43,19 @@ object UpgradeRenderer {
   def render(matrix: PoseStack, buffer: MultiBufferSource, stack: ItemStack, mountPoint: MountPoint): Unit = {
     val descriptor = api.Items.get(stack)
 
-    if (descriptor == api.Items.get(Constants.ItemName.CraftingUpgrade)) {
+    if (descriptor == api.Items.get(Constants.ItemName.CRAFTING_UPGRADE)) {
       drawSimpleBlock(matrix, buffer.getBuffer(RenderTypes.UPGRADE_CRAFTING), mountPoint)
 
       RenderState.checkError(getClass.getName + ".renderItem: crafting upgrade")
     }
 
-    else if (descriptor == api.Items.get(Constants.ItemName.GeneratorUpgrade)) {
+    else if (descriptor == api.Items.get(Constants.ItemName.GENERATOR_UPGRADE)) {
       drawSimpleBlock(matrix, buffer.getBuffer(RenderTypes.UPGRADE_GENERATOR), mountPoint, if (Item.dataTag(stack).getInt("remainingTicks") > 0) 0.5f else 0)
 
       RenderState.checkError(getClass.getName + ".renderItem: generator upgrade")
     }
 
-    else if (descriptor == api.Items.get(Constants.ItemName.InventoryUpgrade)) {
+    else if (descriptor == api.Items.get(Constants.ItemName.INVENTORY_UPGRADE)) {
       drawSimpleBlock(matrix, buffer.getBuffer(RenderTypes.UPGRADE_INVENTORY), mountPoint)
 
       RenderState.checkError(getClass.getName + ".renderItem: inventory upgrade")

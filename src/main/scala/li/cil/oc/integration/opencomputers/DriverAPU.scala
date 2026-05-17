@@ -12,9 +12,9 @@ import net.minecraft.world.item.ItemStack
 
 object DriverAPU extends DriverCPU with HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.APUTier1),
-    api.Items.get(Constants.ItemName.APUTier2),
-    api.Items.get(Constants.ItemName.APUCreative))
+    api.Items.get(Constants.ItemName.APU_TIER_1),
+    api.Items.get(Constants.ItemName.APU_TIER_2),
+    api.Items.get(Constants.ItemName.APU_CREATIVE))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

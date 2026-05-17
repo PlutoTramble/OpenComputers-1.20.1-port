@@ -32,7 +32,7 @@ class UpgradeDatabase(val data: Container) extends AbstractManagedEnvironment wi
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Object catalogue",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "iCatalogue (patent pending)",
     DeviceAttribute.Capacity -> size.toString
   )

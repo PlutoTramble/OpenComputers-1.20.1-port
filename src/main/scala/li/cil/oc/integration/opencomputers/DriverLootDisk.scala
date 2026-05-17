@@ -15,7 +15,7 @@ import net.minecraftforge.server.ServerLifecycleHooks
 // a factory system that allows third-party mods to register loot disks.
 object DriverLootDisk extends Item {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.Floppy)) &&
+    api.Items.get(Constants.ItemName.FLOPPY)) &&
     (stack.hasTag && stack.getTag.contains(Settings.namespace + "lootPath"))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =

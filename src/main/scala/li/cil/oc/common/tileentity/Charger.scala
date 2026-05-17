@@ -57,7 +57,7 @@ class Charger(selfType: BlockEntityType[_ <: Charger], blockPosition: BlockPos, 
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Charger",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "PowerUpper"
   )
 

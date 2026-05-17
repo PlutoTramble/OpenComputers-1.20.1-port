@@ -101,7 +101,7 @@ class Tablet(props: Properties) extends Item(props) with IForgeItem with traits.
       case Some(state) => if (state) "_on" else "_off"
       case _ => ""
     }
-    new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.ItemName.Tablet + suffix, "inventory")
+    new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.ItemName.TABLET + suffix, "inventory")
   }
 
   @OnlyIn(Dist.CLIENT)
@@ -139,7 +139,7 @@ class Tablet(props: Properties) extends Item(props) with IForgeItem with traits.
     entity match {
       case player: Player =>
         // Play an audio cue to let players know when they finished analyzing a block.
-        if (world.isClientSide && player.getUseItemRemainingTicks == TimeToAnalyze && api.Items.get(player.getUseItem) == api.Items.get(Constants.ItemName.Tablet)) {
+        if (world.isClientSide && player.getUseItemRemainingTicks == TimeToAnalyze && api.Items.get(player.getUseItem) == api.Items.get(Constants.ItemName.TABLET)) {
           Audio.play(player.getX.toFloat, player.getY.toFloat + 2, player.getZ.toFloat, ".")
         }
         Tablet.get(stack, player).update(world, player, slot, selected)

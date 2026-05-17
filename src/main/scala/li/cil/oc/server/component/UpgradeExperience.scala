@@ -28,7 +28,7 @@ class UpgradeExperience(val host: EnvironmentHost with internal.Agent) extends A
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Knowledge database",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "ERSO (Event Recorder and Self-Optimizer)",
     DeviceAttribute.Capacity -> "30"
   )

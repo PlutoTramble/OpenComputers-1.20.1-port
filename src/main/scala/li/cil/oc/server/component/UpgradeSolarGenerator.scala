@@ -26,7 +26,7 @@ class UpgradeSolarGenerator(val host: EnvironmentHost) extends AbstractManagedEn
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Power,
     DeviceAttribute.Description -> "Solar panel",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Enligh10"
   )
 

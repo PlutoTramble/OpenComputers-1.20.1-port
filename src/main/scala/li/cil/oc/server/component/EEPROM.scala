@@ -40,7 +40,7 @@ class EEPROM extends AbstractManagedEnvironment with DeviceInfo {
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Memory,
     DeviceAttribute.Description -> "EEPROM",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "FlashStick2k",
     DeviceAttribute.Capacity -> Settings.get.eepromSize.toString,
     DeviceAttribute.Size -> Settings.get.eepromSize.toString

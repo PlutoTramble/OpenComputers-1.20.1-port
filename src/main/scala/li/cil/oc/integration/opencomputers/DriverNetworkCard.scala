@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack
 
 object DriverNetworkCard extends Item with HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.NetworkCard))
+    api.Items.get(Constants.ItemName.NETWORK_CARD))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

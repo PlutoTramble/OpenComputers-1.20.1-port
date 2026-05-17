@@ -25,7 +25,7 @@ class UpgradeTank(val owner: EnvironmentHost, val capacity: Int) extends Abstrac
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Tank upgrade",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Superblubb V10",
     DeviceAttribute.Capacity -> capacity.toString
   )

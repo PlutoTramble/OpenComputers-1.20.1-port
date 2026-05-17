@@ -39,7 +39,7 @@ class UpgradeGenerator(val host: EnvironmentHost with internal.Agent) extends Ab
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Power,
     DeviceAttribute.Description -> "Generator",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Portagen 2.0 (Rev. 3)",
     DeviceAttribute.Capacity -> "1"
   )

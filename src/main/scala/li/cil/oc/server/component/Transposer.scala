@@ -32,7 +32,7 @@ object Transposer {
     private final lazy val deviceInfo = Map(
       DeviceAttribute.Class -> DeviceClass.Generic,
       DeviceAttribute.Description -> "Transposer",
-      DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+      DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
       DeviceAttribute.Product -> "TP4k-iX"
     )
 

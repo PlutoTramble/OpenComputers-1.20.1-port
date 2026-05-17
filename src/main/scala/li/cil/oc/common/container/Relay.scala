@@ -15,9 +15,9 @@ import net.minecraft.world.inventory.MenuType
 class Relay(selfType: MenuType[_ <: Relay], id: Int, playerInventory: Inventory, relay: Container)
   extends Player(selfType, id, playerInventory, relay) {
 
-  lazy final val WirelessNetworkCardTier1: ItemInfo = api.Items.get(Constants.ItemName.WirelessNetworkCardTier1)
-  lazy final val WirelessNetworkCardTier2: ItemInfo = api.Items.get(Constants.ItemName.WirelessNetworkCardTier2)
-  lazy final val LinkedCard: ItemInfo = api.Items.get(Constants.ItemName.LinkedCard)
+  lazy final val WirelessNetworkCardTier1: ItemInfo = api.Items.get(Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_1)
+  lazy final val WirelessNetworkCardTier2: ItemInfo = api.Items.get(Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_2)
+  lazy final val LinkedCard: ItemInfo = api.Items.get(Constants.ItemName.LINKED_CARD)
 
   override protected def getHostClass = classOf[tileentity.Relay]
 

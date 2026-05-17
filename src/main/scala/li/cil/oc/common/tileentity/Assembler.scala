@@ -49,7 +49,7 @@ class Assembler(selfType: BlockEntityType[_ <: Assembler], pos: BlockPos, state:
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Assembler",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Factorizer R1D1"
   )
 

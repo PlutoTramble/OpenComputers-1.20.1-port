@@ -58,14 +58,14 @@ class ModPluginOpenComputers extends IModPlugin {
 
     // Only the preconfigured blocks and items have to be here.
     useNBT(
-      Constants.BlockName.Microcontroller,
-      Constants.BlockName.Robot,
+      Constants.BlockName.MICROCONTROLLER,
+      Constants.BlockName.ROBOT,
 
-      Constants.ItemName.Drone,
-      Constants.ItemName.Tablet
+      Constants.ItemName.DRONE,
+      Constants.ItemName.TABLET
     )
 
-    subtypeRegistry.registerSubtypeInterpreter(Items.get(Constants.ItemName.Floppy).item(), new IIngredientSubtypeInterpreter[ItemStack] {
+    subtypeRegistry.registerSubtypeInterpreter(Items.get(Constants.ItemName.FLOPPY).item(), new IIngredientSubtypeInterpreter[ItemStack] {
       override def apply(stack: ItemStack, ctx: UidContext): String = {
         if (!stack.hasTag) return IIngredientSubtypeInterpreter.NONE
         // Separate loot disks from normal floppies

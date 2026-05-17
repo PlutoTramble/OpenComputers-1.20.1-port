@@ -57,7 +57,7 @@ class Drive(val capacity: Int, val platterCount: Int, val label: Label, host: Op
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Disk,
     DeviceAttribute.Description -> "Hard disk drive",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> ("MPD" + (capacity / 1024).toString + "L" + platterCount.toString),
     DeviceAttribute.Capacity -> (capacity * 1.024).toInt.toString,
     DeviceAttribute.Size -> capacity.toString,

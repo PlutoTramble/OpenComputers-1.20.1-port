@@ -40,7 +40,7 @@ class UpgradeNavigation(val host: EnvironmentHost with Rotatable) extends Abstra
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Navigation upgrade",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "PathFinder v3",
     DeviceAttribute.Capacity -> data.getSize(host.world).toString
   )

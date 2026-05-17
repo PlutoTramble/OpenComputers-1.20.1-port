@@ -5,7 +5,7 @@ import li.cil.oc.Settings
 import net.minecraft.world.item.ItemStack
 import net.minecraft.nbt.CompoundTag
 
-class HoverBootsData extends ItemData(Constants.ItemName.HoverBoots) {
+class HoverBootsData extends ItemData(Constants.ItemName.HOVER_BOOTS) {
   def this(stack: ItemStack) {
     this()
     loadData(stack)

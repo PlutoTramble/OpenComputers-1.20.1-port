@@ -15,16 +15,16 @@ import net.minecraft.nbt.Tag
 import net.minecraftforge.eventbus.api.SubscribeEvent
 
 object RackMountableRenderHandler {
-  lazy val DiskDriveMountable = api.Items.get(Constants.ItemName.DiskDriveMountable)
+  lazy val DiskDriveMountable = api.Items.get(Constants.ItemName.DISK_DRIVE_MOUNTABLE)
 
   lazy val Servers = Array(
-    api.Items.get(Constants.ItemName.ServerTier1),
-    api.Items.get(Constants.ItemName.ServerTier2),
-    api.Items.get(Constants.ItemName.ServerTier3),
-    api.Items.get(Constants.ItemName.ServerCreative)
+    api.Items.get(Constants.ItemName.SERVER_TIER_1),
+    api.Items.get(Constants.ItemName.SERVER_TIER_2),
+    api.Items.get(Constants.ItemName.SERVER_TIER_3),
+    api.Items.get(Constants.ItemName.SERVER_CREATIVE)
   )
 
-  lazy val TerminalServer = api.Items.get(Constants.ItemName.TerminalServer)
+  lazy val TerminalServer = api.Items.get(Constants.ItemName.TERMINAL_SERVER)
 
   @SubscribeEvent
   def onRackMountableRendering(e: RackMountableRenderEvent.BlockEntity): Unit = {

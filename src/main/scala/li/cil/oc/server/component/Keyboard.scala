@@ -39,7 +39,7 @@ class Keyboard(val host: EnvironmentHost) extends AbstractManagedEnvironment wit
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Input,
     DeviceAttribute.Description -> "Keyboard",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Fancytyper MX-Stone"
   )
 

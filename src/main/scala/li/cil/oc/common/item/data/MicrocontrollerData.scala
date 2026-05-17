@@ -9,7 +9,7 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.nbt.Tag
 
-class MicrocontrollerData(itemName: String = Constants.BlockName.Microcontroller) extends ItemData(itemName) {
+class MicrocontrollerData(itemName: String = Constants.BlockName.MICROCONTROLLER) extends ItemData(itemName) {
   def this(stack: ItemStack) {
     this()
     loadData(stack)

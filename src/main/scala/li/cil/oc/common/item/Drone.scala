@@ -26,7 +26,7 @@ import net.minecraftforge.api.distmarker.OnlyIn
 
 class Drone(props: Properties) extends Item(props) with IForgeItem with traits.SimpleItem with CustomModel {
   @OnlyIn(Dist.CLIENT)
-  override def getModelLocation(stack: ItemStack) = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.ItemName.Drone, "inventory")
+  override def getModelLocation(stack: ItemStack) = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.ItemName.DRONE, "inventory")
 
   @OnlyIn(Dist.CLIENT)
   override def bakeModels(bakeEvent: ModelBakeEvent): Unit = {

@@ -32,7 +32,7 @@ trait RedstoneWireless extends RedstoneSignaller with DeviceInfo {
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Communication,
     DeviceAttribute.Description -> "Wireless redstone controller",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Rw400-M",
     DeviceAttribute.Capacity -> "1",
     DeviceAttribute.Width -> "1"

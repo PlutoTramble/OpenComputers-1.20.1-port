@@ -53,7 +53,7 @@ class Printer(selfType: BlockEntityType[_ <: Printer], pos: BlockPos, state: Blo
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Printer,
     DeviceAttribute.Description -> "3D Printer",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Omni-Materializer T6.1"
   )
 

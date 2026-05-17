@@ -22,7 +22,7 @@ class UpgradeBattery(val tier: Int) extends AbstractManagedEnvironment with Devi
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Power,
     DeviceAttribute.Description -> "Battery",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Unlimited Power (Almost Ed.)",
     DeviceAttribute.Capacity -> Settings.get.bufferCapacitorUpgrades(tier).toString
   )

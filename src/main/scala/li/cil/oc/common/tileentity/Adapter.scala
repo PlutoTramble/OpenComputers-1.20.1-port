@@ -43,7 +43,7 @@ class Adapter(selfType: BlockEntityType[_ <: Adapter], pos: BlockPos, state: Blo
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Bus,
     DeviceAttribute.Description -> "Adapter",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Multiplug Ext.1"
   )
 

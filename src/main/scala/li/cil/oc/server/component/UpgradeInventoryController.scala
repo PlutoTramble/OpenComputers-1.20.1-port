@@ -27,7 +27,7 @@ object UpgradeInventoryController {
     private final lazy val deviceInfo = Map(
       DeviceAttribute.Class -> DeviceClass.Generic,
       DeviceAttribute.Description -> "Inventory controller",
-      DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+      DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
       DeviceAttribute.Product -> "Item Cataloguer R1"
     )
 

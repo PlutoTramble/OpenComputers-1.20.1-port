@@ -47,7 +47,7 @@ class Case(selfType: BlockEntityType[_ <: Case], pos: BlockPos, state: BlockStat
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.System,
     DeviceAttribute.Description -> "Computer",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Blocker",
     DeviceAttribute.Capacity -> getContainerSize.toString
   )

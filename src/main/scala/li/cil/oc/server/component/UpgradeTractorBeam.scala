@@ -35,7 +35,7 @@ object UpgradeTractorBeam {
     private final lazy val deviceInfo = Map(
       DeviceAttribute.Class -> DeviceClass.Generic,
       DeviceAttribute.Description -> "Tractor beam",
-      DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+      DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
       DeviceAttribute.Product -> "T313-K1N.3515"
     )
 

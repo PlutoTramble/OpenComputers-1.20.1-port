@@ -566,7 +566,7 @@ class Drone(selfType: EntityType[Drone], world: Level) extends Entity(selfType, 
     if (!isAlive) return
     super.outOfWorld()
     if (!world.isClientSide) {
-      val stack = api.Items.get(Constants.ItemName.Drone).createItemStack(1)
+      val stack = api.Items.get(Constants.ItemName.DRONE).createItemStack(1)
       info.storedEnergy = control.node.localBuffer.toInt
       info.saveData(stack)
       val entity = new ItemEntity(world, getX, getY, getZ, stack)

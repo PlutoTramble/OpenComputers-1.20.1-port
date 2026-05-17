@@ -17,7 +17,7 @@ import scala.collection.immutable
 class LootDiskCyclingRecipe(val getId: ResourceLocation) extends CraftingRecipe {
   val ingredients = NonNullList.create[Ingredient]
   ingredients.add(Ingredient.of(util.Arrays.stream(Loot.disksForCycling.toArray)))
-  ingredients.add(Ingredient.of(api.Items.get(Constants.ItemName.Wrench).createItemStack(1)))
+  ingredients.add(Ingredient.of(api.Items.get(Constants.ItemName.WRENCH).createItemStack(1)))
 
   override def matches(crafting: CraftingContainer, world: Level): Boolean = {
     val stacks = collectStacks(crafting).toArray

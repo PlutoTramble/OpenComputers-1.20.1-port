@@ -27,7 +27,7 @@ class Item(value: Block, props: Properties) extends BlockItem(value, props) {
   }
 
   override def getName(stack: ItemStack): Component = {
-    if (api.Items.get(stack) == api.Items.get(Constants.BlockName.Print)) {
+    if (api.Items.get(stack) == api.Items.get(Constants.BlockName.PRINT)) {
       val data = new PrintData(stack)
       data.label.map(new TextComponent(_)).getOrElse(super.getName(stack))
     }
@@ -44,7 +44,7 @@ class Item(value: Block, props: Properties) extends BlockItem(value, props) {
     // When placing robots in creative mode, we have to copy the stack
     // manually before it's placed to ensure different component addresses
     // in the different robots, to avoid interference of screens e.g.
-    val needsCopying = ctx.getPlayer.isCreative && api.Items.get(ctx.getItemInHand) == api.Items.get(Constants.BlockName.Robot)
+    val needsCopying = ctx.getPlayer.isCreative && api.Items.get(ctx.getItemInHand) == api.Items.get(Constants.BlockName.ROBOT)
     val ctxToUse = if (needsCopying) {
       val stackToUse = new RobotData(ctx.getItemInHand).copyItemStack()
       val hitResult = new BlockHitResult(ctx.getClickLocation, ctx.getClickedFace, ctx.getClickedPos, ctx.isInside)

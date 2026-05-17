@@ -20,28 +20,28 @@ import scala.collection.convert.ImplicitConversionsToScala._
 import scala.util.control.Breaks._
 
 object ExtendedRecipe {
-  private lazy val drone = api.Items.get(Constants.ItemName.Drone)
+  private lazy val drone = api.Items.get(Constants.ItemName.DRONE)
   private lazy val eeprom = api.Items.get(Constants.ItemName.EEPROM)
-  private lazy val luaBios = api.Items.get(Constants.ItemName.LuaBios)
-  private lazy val mcu = api.Items.get(Constants.BlockName.Microcontroller)
-  private lazy val navigationUpgrade = api.Items.get(Constants.ItemName.NavigationUpgrade)
-  private lazy val linkedCard = api.Items.get(Constants.ItemName.LinkedCard)
-  private lazy val floppy = api.Items.get(Constants.ItemName.Floppy)
+  private lazy val luaBios = api.Items.get(Constants.ItemName.LUA_BIOS)
+  private lazy val mcu = api.Items.get(Constants.BlockName.MICROCONTROLLER)
+  private lazy val navigationUpgrade = api.Items.get(Constants.ItemName.NAVIGATION_UPGRADE)
+  private lazy val linkedCard = api.Items.get(Constants.ItemName.LINKED_CARD)
+  private lazy val floppy = api.Items.get(Constants.ItemName.FLOPPY)
   private lazy val hdds = Array(
-    api.Items.get(Constants.ItemName.HDDTier1),
-    api.Items.get(Constants.ItemName.HDDTier2),
-    api.Items.get(Constants.ItemName.HDDTier3)
+    api.Items.get(Constants.ItemName.HDD_TIER_1),
+    api.Items.get(Constants.ItemName.HDD_TIER_2),
+    api.Items.get(Constants.ItemName.HDD_TIER_3)
   )
   private lazy val cpus = Array(
-    api.Items.get(Constants.ItemName.CPUTier1),
-    api.Items.get(Constants.ItemName.CPUTier2),
-    api.Items.get(Constants.ItemName.CPUTier3),
-    api.Items.get(Constants.ItemName.APUTier1),
-    api.Items.get(Constants.ItemName.APUTier2)
+    api.Items.get(Constants.ItemName.CPU_TIER_1),
+    api.Items.get(Constants.ItemName.CPU_TIER_2),
+    api.Items.get(Constants.ItemName.CPU_TIER_3),
+    api.Items.get(Constants.ItemName.APU_TIER_1),
+    api.Items.get(Constants.ItemName.APU_TIER_2)
   )
-  private lazy val robot = api.Items.get(Constants.BlockName.Robot)
-  private lazy val tablet = api.Items.get(Constants.ItemName.Tablet)
-  private lazy val print = api.Items.get(Constants.BlockName.Print)
+  private lazy val robot = api.Items.get(Constants.BlockName.ROBOT)
+  private lazy val tablet = api.Items.get(Constants.ItemName.TABLET)
+  private lazy val print = api.Items.get(Constants.BlockName.PRINT)
   private val beaconBlocks = ItemTags.create(new ResourceLocation("forge", "beacon_base_blocks"))
 
   def patchRecipe[R <: Recipe[_]](recipe: R): R = {

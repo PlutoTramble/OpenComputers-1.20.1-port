@@ -1,8 +1,6 @@
 package li.cil.oc.common.template
 
-import li.cil.oc.Constants
-import li.cil.oc.Settings
-import li.cil.oc.api
+import li.cil.oc.{Constants, SConstants, Settings, api}
 import li.cil.oc.api.internal
 import li.cil.oc.common.Slot
 import li.cil.oc.common.Tier
@@ -17,13 +15,13 @@ import scala.collection.convert.ImplicitConversionsToJava._
 object RobotTemplate extends Template {
   override protected def hostClass = classOf[internal.Robot]
 
-  def selectTier1(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.BlockName.CaseTier1)
+  def selectTier1(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.BlockName.CASE_TIER_1)
 
-  def selectTier2(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.BlockName.CaseTier2)
+  def selectTier2(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.BlockName.CASE_TIER_2)
 
-  def selectTier3(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.BlockName.CaseTier3)
+  def selectTier3(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.BlockName.CASE_TIER_3)
 
-  def selectCreative(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.BlockName.CaseCreative)
+  def selectCreative(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.BlockName.CASE_CREATIVE)
 
   def validate(inventory: Container): Array[AnyRef] = validateComputer(inventory)
 
@@ -42,11 +40,11 @@ object RobotTemplate extends Template {
     Array(stack, Double.box(energy))
   }
 
-  def selectDisassembler(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.BlockName.Robot)
+  def selectDisassembler(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.BlockName.ROBOT)
 
   def disassemble(stack: ItemStack, ingredients: Array[ItemStack]) = {
     val info = new RobotData(stack)
-    val itemName = Constants.BlockName.Case(info.tier)
+    val itemName = SConstants.BlockName.Case(info.tier)
 
     Array(api.Items.get(itemName).createItemStack(1)) ++ info.containers ++ info.components
   }

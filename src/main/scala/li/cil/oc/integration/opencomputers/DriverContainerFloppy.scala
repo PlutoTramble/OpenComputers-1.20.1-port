@@ -10,7 +10,7 @@ import net.minecraft.world.item.ItemStack
 
 object DriverContainerFloppy extends Item with Container {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.BlockName.DiskDrive))
+    api.Items.get(Constants.BlockName.DISK_DRIVE))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) = null
 

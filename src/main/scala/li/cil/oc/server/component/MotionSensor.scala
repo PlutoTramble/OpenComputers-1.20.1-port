@@ -33,7 +33,7 @@ class MotionSensor(val host: EnvironmentHost) extends prefab.AbstractManagedEnvi
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Motion sensor",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Blinker M1K0",
     DeviceAttribute.Capacity -> radius.toString
   )

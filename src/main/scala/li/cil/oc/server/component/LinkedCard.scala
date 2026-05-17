@@ -34,7 +34,7 @@ class LinkedCard extends AbstractManagedEnvironment with QuantumNetwork.QuantumN
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Network,
     DeviceAttribute.Description -> "Quantumnet controller",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "HyperLink IV: Ender Edition",
     DeviceAttribute.Capacity -> Settings.get.maxNetworkPacketSize.toString,
     DeviceAttribute.Width -> Settings.get.maxNetworkPacketParts.toString

@@ -30,7 +30,7 @@ class UpgradeBarcodeReader(val host: EnvironmentHost) extends AbstractManagedEnv
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Barcode reader upgrade",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Readerizer Deluxe"
   )
 

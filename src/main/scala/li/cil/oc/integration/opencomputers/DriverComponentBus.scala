@@ -12,10 +12,10 @@ import net.minecraft.world.item.ItemStack
 
 object DriverComponentBus extends Item with Processor {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.ComponentBusTier1),
-    api.Items.get(Constants.ItemName.ComponentBusTier2),
-    api.Items.get(Constants.ItemName.ComponentBusTier3),
-    api.Items.get(Constants.ItemName.ComponentBusCreative))
+    api.Items.get(Constants.ItemName.COMPONENT_BUS_TIER_1),
+    api.Items.get(Constants.ItemName.COMPONENT_BUS_TIER_2),
+    api.Items.get(Constants.ItemName.COMPONENT_BUS_TIER_3),
+    api.Items.get(Constants.ItemName.COMPONENT_BUS_CREATIVE))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) = null
 

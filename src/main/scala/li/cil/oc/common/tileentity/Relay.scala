@@ -46,9 +46,9 @@ import net.minecraftforge.api.distmarker.OnlyIn
 class Relay(selfType: BlockEntityType[_ <: Relay], pos: BlockPos, state: BlockState) extends BlockEntity(selfType, pos, state) with traits.Hub with traits.ComponentInventory
   with traits.PowerAcceptor with Analyzable with WirelessEndpoint with QuantumNetwork.QuantumNode with MenuProvider {
 
-  lazy final val WirelessNetworkCardTier1: ItemInfo = api.Items.get(Constants.ItemName.WirelessNetworkCardTier1)
-  lazy final val WirelessNetworkCardTier2: ItemInfo = api.Items.get(Constants.ItemName.WirelessNetworkCardTier2)
-  lazy final val LinkedCard: ItemInfo = api.Items.get(Constants.ItemName.LinkedCard)
+  lazy final val WirelessNetworkCardTier1: ItemInfo = api.Items.get(Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_1)
+  lazy final val WirelessNetworkCardTier2: ItemInfo = api.Items.get(Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_2)
+  lazy final val LinkedCard: ItemInfo = api.Items.get(Constants.ItemName.LINKED_CARD)
 
   var strength: Double = maxWirelessRange
 

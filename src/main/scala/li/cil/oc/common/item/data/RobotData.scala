@@ -29,7 +29,7 @@ object RobotData {
   def randomName = if (names.length > 0) names((math.random * names.length).toInt) else "Robot"
 }
 
-class RobotData extends ItemData(Constants.BlockName.Robot) {
+class RobotData extends ItemData(Constants.BlockName.ROBOT) {
   def this(stack: ItemStack) {
     this()
     loadData(stack)

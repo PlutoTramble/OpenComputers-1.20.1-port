@@ -12,8 +12,8 @@ import net.minecraft.world.item.ItemStack
 
 object DriverWirelessNetworkCard extends Item {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.WirelessNetworkCardTier1),
-    api.Items.get(Constants.ItemName.WirelessNetworkCardTier2))
+    api.Items.get(Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_1),
+    api.Items.get(Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_2))
     
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

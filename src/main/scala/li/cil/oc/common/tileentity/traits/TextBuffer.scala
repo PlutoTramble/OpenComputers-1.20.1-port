@@ -11,7 +11,7 @@ import net.minecraftforge.api.distmarker.OnlyIn
 
 trait TextBuffer extends Environment with Tickable {
   lazy val buffer: internal.TextBuffer = {
-    val screenItem = api.Items.get(Constants.BlockName.ScreenTier1).createItemStack(1)
+    val screenItem = api.Items.get(Constants.BlockName.SCREEN_TIER_1).createItemStack(1)
     val buffer = api.Driver.driverFor(screenItem, getClass).createEnvironment(screenItem, this).asInstanceOf[api.internal.TextBuffer]
     val (maxWidth, maxHeight) = Settings.screenResolutionsByTier(tier)
     buffer.setMaximumResolution(maxWidth, maxHeight)

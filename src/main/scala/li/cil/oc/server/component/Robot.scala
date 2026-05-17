@@ -42,7 +42,7 @@ class Robot(val agent: tileentity.Robot) extends AbstractManagedEnvironment with
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.System,
     DeviceAttribute.Description -> "Robot",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Caterpillar",
     DeviceAttribute.Capacity -> agent.getContainerSize.toString
   )

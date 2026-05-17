@@ -14,7 +14,7 @@ import net.minecraft.nbt.{CompoundTag, Tag}
 
 object DriverTablet extends Item {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.Tablet))
+    api.Items.get(Constants.ItemName.TABLET))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

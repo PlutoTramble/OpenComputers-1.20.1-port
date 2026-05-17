@@ -59,7 +59,7 @@ class RobotAfterimage(props: Properties) extends SimpleBlock(props) {
   @Deprecated
   override def use(state: BlockState, world: Level, pos: BlockPos, player: Player, hand: InteractionHand, trace: BlockHitResult): InteractionResult = {
     findMovingRobot(world, pos) match {
-      case Some(robot) => api.Items.get(Constants.BlockName.Robot).block.use(world.getBlockState(robot.getBlockPos), world, robot.getBlockPos, player, hand, trace)
+      case Some(robot) => api.Items.get(Constants.BlockName.ROBOT).block.use(world.getBlockState(robot.getBlockPos), world, robot.getBlockPos, player, hand, trace)
       case _ => if (world.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState)) InteractionResult.sidedSuccess(world.isClientSide) else InteractionResult.PASS
     }
   }

@@ -36,8 +36,8 @@ object Items extends ItemAPI {
   val names = mutable.Map.empty[Any, String]
 
   val aliases = Map(
-    "datacard" -> Constants.ItemName.DataCardTier1,
-    "wlancard" -> Constants.ItemName.WirelessNetworkCardTier2
+    "datacard" -> Constants.ItemName.DATA_CARD_TIER_1,
+    "wlancard" -> Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_2
   )
 
   override def get(name: String): ItemInfo = descriptors.get(name).orNull
@@ -197,19 +197,19 @@ object Items extends ItemAPI {
     data.tier = Tier.Four
     data.storedEnergy = Settings.get.bufferDrone.toInt
     data.components = Array(
-      safeGetStack(Constants.ItemName.InventoryUpgrade),
-      safeGetStack(Constants.ItemName.InventoryUpgrade),
-      safeGetStack(Constants.ItemName.InventoryControllerUpgrade),
-      safeGetStack(Constants.ItemName.TankUpgrade),
-      safeGetStack(Constants.ItemName.TankControllerUpgrade),
-      safeGetStack(Constants.ItemName.LeashUpgrade),
-      safeGetStack(Constants.ItemName.AngelUpgrade),
+      safeGetStack(Constants.ItemName.INVENTORY_UPGRADE),
+      safeGetStack(Constants.ItemName.INVENTORY_UPGRADE),
+      safeGetStack(Constants.ItemName.INVENTORY_CONTROLLER_UPGRADE),
+      safeGetStack(Constants.ItemName.TANK_UPGRADE),
+      safeGetStack(Constants.ItemName.TANK_CONTROLLER_UPGRADE),
+      safeGetStack(Constants.ItemName.LEASH_UPGRADE),
+      safeGetStack(Constants.ItemName.ANGEL_UPGRADE),
 
-      safeGetStack(Constants.ItemName.WirelessNetworkCardTier2),
+      safeGetStack(Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_2),
 
-      LuaStateFactory.setDefaultArch(safeGetStack(Constants.ItemName.CPUTier3)),
-      safeGetStack(Constants.ItemName.RAMTier6),
-      safeGetStack(Constants.ItemName.RAMTier6)
+      LuaStateFactory.setDefaultArch(safeGetStack(Constants.ItemName.CPU_TIER_3)),
+      safeGetStack(Constants.ItemName.RAM_TIER_6),
+      safeGetStack(Constants.ItemName.RAM_TIER_6)
     ).filter(!_.isEmpty)
 
     data.createItemStack()
@@ -221,15 +221,15 @@ object Items extends ItemAPI {
     data.tier = Tier.Four
     data.storedEnergy = Settings.get.bufferMicrocontroller.toInt
     data.components = Array(
-      safeGetStack(Constants.ItemName.SignUpgrade),
-      safeGetStack(Constants.ItemName.PistonUpgrade),
+      safeGetStack(Constants.ItemName.SIGN_UPGRADE),
+      safeGetStack(Constants.ItemName.PISTON_UPGRADE),
 
-      safeGetStack(Constants.ItemName.RedstoneCardTier2),
-      safeGetStack(Constants.ItemName.WirelessNetworkCardTier2),
+      safeGetStack(Constants.ItemName.REDSTONE_CARD_TIER_2),
+      safeGetStack(Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_2),
 
-      LuaStateFactory.setDefaultArch(safeGetStack(Constants.ItemName.CPUTier3)),
-      safeGetStack(Constants.ItemName.RAMTier6),
-      safeGetStack(Constants.ItemName.RAMTier6)
+      LuaStateFactory.setDefaultArch(safeGetStack(Constants.ItemName.CPU_TIER_3)),
+      safeGetStack(Constants.ItemName.RAM_TIER_6),
+      safeGetStack(Constants.ItemName.RAM_TIER_6)
     ).filter(!_.isEmpty)
 
     data.createItemStack()
@@ -243,39 +243,38 @@ object Items extends ItemAPI {
     data.robotEnergy = Settings.get.bufferRobot.toInt
     data.totalEnergy = data.robotEnergy
     data.components = Array(
-      safeGetStack(Constants.BlockName.ScreenTier1),
-      safeGetStack(Constants.BlockName.Keyboard),
-      safeGetStack(Constants.BlockName.Geolyzer),
-      safeGetStack(Constants.ItemName.InventoryUpgrade),
-      safeGetStack(Constants.ItemName.InventoryUpgrade),
-      safeGetStack(Constants.ItemName.InventoryUpgrade),
-      safeGetStack(Constants.ItemName.InventoryUpgrade),
-      safeGetStack(Constants.ItemName.InventoryControllerUpgrade),
-      safeGetStack(Constants.ItemName.TankUpgrade),
-      safeGetStack(Constants.ItemName.TankControllerUpgrade),
-      safeGetStack(Constants.ItemName.CraftingUpgrade),
-      safeGetStack(Constants.ItemName.HoverUpgradeTier2),
-      safeGetStack(Constants.ItemName.AngelUpgrade),
-      safeGetStack(Constants.ItemName.TradingUpgrade),
-      safeGetStack(Constants.ItemName.ExperienceUpgrade),
+      safeGetStack(Constants.BlockName.SCREEN_TIER_1),
+      safeGetStack(Constants.BlockName.KEYBOARD),
+      safeGetStack(Constants.BlockName.GEOLYZER),
+      safeGetStack(Constants.ItemName.INVENTORY_UPGRADE),
+      safeGetStack(Constants.ItemName.INVENTORY_UPGRADE),
+      safeGetStack(Constants.ItemName.INVENTORY_UPGRADE),
+      safeGetStack(Constants.ItemName.INVENTORY_CONTROLLER_UPGRADE),
+      safeGetStack(Constants.ItemName.TANK_UPGRADE),
+      safeGetStack(Constants.ItemName.TANK_CONTROLLER_UPGRADE),
+      safeGetStack(Constants.ItemName.CRAFTING_UPGRADE),
+      safeGetStack(Constants.ItemName.HOVER_UPGRADE_TIER_2),
+      safeGetStack(Constants.ItemName.ANGEL_UPGRADE),
+      safeGetStack(Constants.ItemName.TRADING_UPGRADE),
+      safeGetStack(Constants.ItemName.EXPERIENCE_UPGRADE),
 
-      safeGetStack(Constants.ItemName.GraphicsCardTier3),
-      safeGetStack(Constants.ItemName.RedstoneCardTier2),
-      safeGetStack(Constants.ItemName.WirelessNetworkCardTier2),
-      safeGetStack(Constants.ItemName.InternetCard),
+      safeGetStack(Constants.ItemName.GRAPHICS_CARD_TIER_3),
+      safeGetStack(Constants.ItemName.REDSTONE_CARD_TIER_2),
+      safeGetStack(Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_2),
+      safeGetStack(Constants.ItemName.INTERNET_CARD),
 
-      LuaStateFactory.setDefaultArch(safeGetStack(Constants.ItemName.CPUTier3)),
-      safeGetStack(Constants.ItemName.RAMTier6),
-      safeGetStack(Constants.ItemName.RAMTier6),
+      LuaStateFactory.setDefaultArch(safeGetStack(Constants.ItemName.CPU_TIER_3)),
+      safeGetStack(Constants.ItemName.RAM_TIER_6),
+      safeGetStack(Constants.ItemName.RAM_TIER_6),
 
-      safeGetStack(Constants.ItemName.LuaBios),
-      safeGetStack(Constants.ItemName.OpenOS),
-      safeGetStack(Constants.ItemName.HDDTier3)
+      safeGetStack(Constants.ItemName.LUA_BIOS),
+      safeGetStack(Constants.ItemName.OPEN_OS),
+      safeGetStack(Constants.ItemName.HDD_TIER_3)
     ).filter(!_.isEmpty)
     data.containers = Array(
-      safeGetStack(Constants.ItemName.CardContainerTier3),
-      safeGetStack(Constants.ItemName.UpgradeContainerTier3),
-      safeGetStack(Constants.BlockName.DiskDrive)
+      safeGetStack(Constants.ItemName.CARD_CONTAINER_TIER_3),
+      safeGetStack(Constants.ItemName.UPGRADE_CONTAINER_TIER_3),
+      safeGetStack(Constants.BlockName.DISK_DRIVE)
     ).filter(!_.isEmpty)
 
     data.createItemStack()
@@ -288,28 +287,28 @@ object Items extends ItemAPI {
     data.energy = Settings.get.bufferTablet
     data.maxEnergy = data.energy
     data.items = Array(
-      safeGetStack(Constants.BlockName.ScreenTier1),
-      safeGetStack(Constants.BlockName.Keyboard),
+      safeGetStack(Constants.BlockName.SCREEN_TIER_1),
+      safeGetStack(Constants.BlockName.KEYBOARD),
 
-      safeGetStack(Constants.ItemName.SignUpgrade),
-      safeGetStack(Constants.ItemName.PistonUpgrade),
-      safeGetStack(Constants.BlockName.Geolyzer),
-      safeGetStack(Constants.ItemName.NavigationUpgrade),
-      safeGetStack(Constants.ItemName.Analyzer),
+      safeGetStack(Constants.ItemName.SIGN_UPGRADE),
+      safeGetStack(Constants.ItemName.PISTON_UPGRADE),
+      safeGetStack(Constants.BlockName.GEOLYZER),
+      safeGetStack(Constants.ItemName.NAVIGATION_UPGRADE),
+      safeGetStack(Constants.ItemName.ANALYZER),
 
-      safeGetStack(Constants.ItemName.GraphicsCardTier2),
-      safeGetStack(Constants.ItemName.RedstoneCardTier2),
-      safeGetStack(Constants.ItemName.WirelessNetworkCardTier2),
+      safeGetStack(Constants.ItemName.GRAPHICS_CARD_TIER_2),
+      safeGetStack(Constants.ItemName.REDSTONE_CARD_TIER_2),
+      safeGetStack(Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_2),
 
-      LuaStateFactory.setDefaultArch(safeGetStack(Constants.ItemName.CPUTier3)),
-      safeGetStack(Constants.ItemName.RAMTier6),
-      safeGetStack(Constants.ItemName.RAMTier6),
+      LuaStateFactory.setDefaultArch(safeGetStack(Constants.ItemName.CPU_TIER_3)),
+      safeGetStack(Constants.ItemName.RAM_TIER_6),
+      safeGetStack(Constants.ItemName.RAM_TIER_6),
 
-      safeGetStack(Constants.ItemName.LuaBios),
-      safeGetStack(Constants.ItemName.HDDTier3)
+      safeGetStack(Constants.ItemName.LUA_BIOS),
+      safeGetStack(Constants.ItemName.HDD_TIER_3)
     ).padTo(32, ItemStack.EMPTY)
-    data.items(31) = safeGetStack(Constants.ItemName.OpenOS)
-    data.container = safeGetStack(Constants.BlockName.DiskDrive)
+    data.items(31) = safeGetStack(Constants.ItemName.OPEN_OS)
+    data.container = safeGetStack(Constants.BlockName.DISK_DRIVE)
 
     data.createItemStack()
   }
@@ -342,181 +341,181 @@ object Items extends ItemAPI {
 
   // Crafting materials.
   private def initMaterials(): Unit = {
-    registerItem(new item.CuttingWire(defaultProps), Constants.ItemName.CuttingWire)
-    registerItem(new item.Acid(defaultProps), Constants.ItemName.Acid)
-    registerItem(new item.RawCircuitBoard(defaultProps), Constants.ItemName.RawCircuitBoard)
-    registerItem(new item.CircuitBoard(defaultProps), Constants.ItemName.CircuitBoard)
-    registerItem(new item.PrintedCircuitBoard(defaultProps), Constants.ItemName.PrintedCircuitBoard)
-    registerItem(new item.CardBase(defaultProps), Constants.ItemName.Card)
-    registerItem(new item.Transistor(defaultProps), Constants.ItemName.Transistor)
-    registerItem(new item.Microchip(defaultProps, Tier.One), Constants.ItemName.ChipTier1)
-    registerItem(new item.Microchip(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.ChipTier2)
-    registerItem(new item.Microchip(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.ChipTier3)
-    registerItem(new item.ALU(defaultProps), Constants.ItemName.Alu)
-    registerItem(new item.ControlUnit(defaultProps), Constants.ItemName.ControlUnit)
-    registerItem(new item.Disk(defaultProps), Constants.ItemName.Disk)
-    registerItem(new item.Interweb(defaultProps), Constants.ItemName.Interweb)
-    registerItem(new item.ButtonGroup(defaultProps), Constants.ItemName.ButtonGroup)
-    registerItem(new item.ArrowKeys(defaultProps), Constants.ItemName.ArrowKeys)
-    registerItem(new item.NumPad(defaultProps), Constants.ItemName.NumPad)
+    registerItem(new item.CuttingWire(defaultProps), Constants.ItemName.CUTTING_WIRE)
+    registerItem(new item.Acid(defaultProps), Constants.ItemName.ACID)
+    registerItem(new item.RawCircuitBoard(defaultProps), Constants.ItemName.RAW_CIRCUIT_BOARD)
+    registerItem(new item.CircuitBoard(defaultProps), Constants.ItemName.CIRCUIT_BOARD)
+    registerItem(new item.PrintedCircuitBoard(defaultProps), Constants.ItemName.PRINTED_CIRCUIT_BOARD)
+    registerItem(new item.CardBase(defaultProps), Constants.ItemName.CARD)
+    registerItem(new item.Transistor(defaultProps), Constants.ItemName.TRANSISTOR)
+    registerItem(new item.Microchip(defaultProps, Tier.One), Constants.ItemName.CHIP_TIER_1)
+    registerItem(new item.Microchip(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.CHIP_TIER_2)
+    registerItem(new item.Microchip(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.CHIP_TIER_3)
+    registerItem(new item.ALU(defaultProps), Constants.ItemName.ALU)
+    registerItem(new item.ControlUnit(defaultProps), Constants.ItemName.CONTROL_UNIT)
+    registerItem(new item.Disk(defaultProps), Constants.ItemName.DISK)
+    registerItem(new item.Interweb(defaultProps), Constants.ItemName.INTERWEB)
+    registerItem(new item.ButtonGroup(defaultProps), Constants.ItemName.BUTTON_GROUP)
+    registerItem(new item.ArrowKeys(defaultProps), Constants.ItemName.ARROW_KEYS)
+    registerItem(new item.NumPad(defaultProps), Constants.ItemName.NUMPAD)
 
-    registerItem(new item.TabletCase(defaultProps, Tier.One), Constants.ItemName.TabletCaseTier1)
-    registerItem(new item.TabletCase(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.TabletCaseTier2)
-    registerItem(new item.TabletCase(defaultProps.rarity(Rarity.EPIC), Tier.Four), Constants.ItemName.TabletCaseCreative)
-    registerItem(new item.MicrocontrollerCase(defaultProps, Tier.One), Constants.ItemName.MicrocontrollerCaseTier1)
-    registerItem(new item.MicrocontrollerCase(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.MicrocontrollerCaseTier2)
-    registerItem(new item.MicrocontrollerCase(defaultProps.rarity(Rarity.EPIC), Tier.Four), Constants.ItemName.MicrocontrollerCaseCreative)
-    registerItem(new item.DroneCase(defaultProps, Tier.One), Constants.ItemName.DroneCaseTier1)
-    registerItem(new item.DroneCase(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.DroneCaseTier2)
-    registerItem(new item.DroneCase(defaultProps.rarity(Rarity.EPIC), Tier.Four), Constants.ItemName.DroneCaseCreative)
+    registerItem(new item.TabletCase(defaultProps, Tier.One), Constants.ItemName.TABLET_CASE_TIER_1)
+    registerItem(new item.TabletCase(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.TABLET_CASE_TIER_2)
+    registerItem(new item.TabletCase(defaultProps.rarity(Rarity.EPIC), Tier.Four), Constants.ItemName.TABLET_CASE_CREATIVE)
+    registerItem(new item.MicrocontrollerCase(defaultProps, Tier.One), Constants.ItemName.MICROCONTROLLER_CASE_TIER_1)
+    registerItem(new item.MicrocontrollerCase(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.MICROCONTROLLER_CASE_TIER_2)
+    registerItem(new item.MicrocontrollerCase(defaultProps.rarity(Rarity.EPIC), Tier.Four), Constants.ItemName.MICROCONTROLLER_CASE_CREATIVE)
+    registerItem(new item.DroneCase(defaultProps, Tier.One), Constants.ItemName.DRONE_CASE_TIER_1)
+    registerItem(new item.DroneCase(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.DRONE_CASE_TIER_2)
+    registerItem(new item.DroneCase(defaultProps.rarity(Rarity.EPIC), Tier.Four), Constants.ItemName.DRONE_CASE_CREATIVE)
 
-    registerItem(new item.InkCartridgeEmpty(defaultProps.stacksTo(1)), Constants.ItemName.InkCartridgeEmpty)
-    registerItem(new item.InkCartridge(defaultProps.stacksTo(1).craftRemainder(get(Constants.ItemName.InkCartridgeEmpty).item)), Constants.ItemName.InkCartridge)
-    registerItem(new item.Chamelium(defaultProps), Constants.ItemName.Chamelium)
+    registerItem(new item.InkCartridgeEmpty(defaultProps.stacksTo(1)), Constants.ItemName.INK_CARTRIDGE_EMPTY)
+    registerItem(new item.InkCartridge(defaultProps.stacksTo(1).craftRemainder(get(Constants.ItemName.INK_CARTRIDGE_EMPTY).item)), Constants.ItemName.INK_CARTRIDGE)
+    registerItem(new item.Chamelium(defaultProps), Constants.ItemName.CHAMELIUM)
 
-    registerItem(new item.DiamondChip(defaultProps), Constants.ItemName.DiamondChip)
+    registerItem(new item.DiamondChip(defaultProps), Constants.ItemName.DIAMOND_CHIP)
   }
 
   // All kinds of tools.
   private def initTools(): Unit = {
-    registerItem(new item.Analyzer(defaultProps), Constants.ItemName.Analyzer)
-    registerItem(new item.Debugger(defaultProps), Constants.ItemName.Debugger)
-    registerItem(new item.Terminal(defaultProps.stacksTo(1)), Constants.ItemName.Terminal)
-    registerItem(new item.TexturePicker(defaultProps), Constants.ItemName.TexturePicker)
-    registerItem(new item.Manual(defaultProps), Constants.ItemName.Manual)
-    registerItem(new item.Wrench(defaultProps.stacksTo(1)), Constants.ItemName.Wrench)
+    registerItem(new item.Analyzer(defaultProps), Constants.ItemName.ANALYZER)
+    registerItem(new item.Debugger(defaultProps), Constants.ItemName.DEBUGGER)
+    registerItem(new item.Terminal(defaultProps.stacksTo(1)), Constants.ItemName.TERMINAL)
+    registerItem(new item.TexturePicker(defaultProps), Constants.ItemName.TEXTURE_PICKER)
+    registerItem(new item.Manual(defaultProps), Constants.ItemName.MANUAL)
+    registerItem(new item.Wrench(defaultProps.stacksTo(1)), Constants.ItemName.WRENCH)
 
     // 1.5.11
     // FIXME : Causes server crashes, disabled as temp fix
-    //registerItem(new item.HoverBoots(defaultProps.stacksTo(1).rarity(Rarity.UNCOMMON).setNoRepair()), Constants.ItemName.HoverBoots)
+    //registerItem(new item.HoverBoots(defaultProps.stacksTo(1).rarity(Rarity.UNCOMMON).setNoRepair()), Constants.ItemName.HOVER_BOOTS)
 
     // 1.5.18
-    registerItem(new item.Nanomachines(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.Nanomachines)
+    registerItem(new item.Nanomachines(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.NANOMACHINES)
   }
 
   // General purpose components.
   private def initComponents(): Unit = {
-    registerItem(new item.CPU(defaultProps, Tier.One), Constants.ItemName.CPUTier1)
-    registerItem(new item.CPU(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.CPUTier2)
-    registerItem(new item.CPU(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.CPUTier3)
+    registerItem(new item.CPU(defaultProps, Tier.One), Constants.ItemName.CPU_TIER_1)
+    registerItem(new item.CPU(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.CPU_TIER_2)
+    registerItem(new item.CPU(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.CPU_TIER_3)
 
-    registerItem(new item.ComponentBus(defaultProps, Tier.One), Constants.ItemName.ComponentBusTier1)
-    registerItem(new item.ComponentBus(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.ComponentBusTier2)
-    registerItem(new item.ComponentBus(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.ComponentBusTier3)
+    registerItem(new item.ComponentBus(defaultProps, Tier.One), Constants.ItemName.COMPONENT_BUS_TIER_1)
+    registerItem(new item.ComponentBus(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.COMPONENT_BUS_TIER_2)
+    registerItem(new item.ComponentBus(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.COMPONENT_BUS_TIER_3)
 
-    registerItem(new item.Memory(defaultProps, Tier.One), Constants.ItemName.RAMTier1)
-    registerItem(new item.Memory(defaultProps, Tier.Two), Constants.ItemName.RAMTier2)
-    registerItem(new item.Memory(defaultProps.rarity(Rarity.UNCOMMON), Tier.Three), Constants.ItemName.RAMTier3)
-    registerItem(new item.Memory(defaultProps.rarity(Rarity.UNCOMMON), Tier.Four), Constants.ItemName.RAMTier4)
-    registerItem(new item.Memory(defaultProps.rarity(Rarity.RARE), Tier.Five), Constants.ItemName.RAMTier5)
-    registerItem(new item.Memory(defaultProps.rarity(Rarity.RARE), Tier.Six), Constants.ItemName.RAMTier6)
+    registerItem(new item.Memory(defaultProps, Tier.One), Constants.ItemName.RAM_TIER_1)
+    registerItem(new item.Memory(defaultProps, Tier.Two), Constants.ItemName.RAM_TIER_2)
+    registerItem(new item.Memory(defaultProps.rarity(Rarity.UNCOMMON), Tier.Three), Constants.ItemName.RAM_TIER_3)
+    registerItem(new item.Memory(defaultProps.rarity(Rarity.UNCOMMON), Tier.Four), Constants.ItemName.RAM_TIER_4)
+    registerItem(new item.Memory(defaultProps.rarity(Rarity.RARE), Tier.Five), Constants.ItemName.RAM_TIER_5)
+    registerItem(new item.Memory(defaultProps.rarity(Rarity.RARE), Tier.Six), Constants.ItemName.RAM_TIER_6)
 
-    registerItem(new item.Server(defaultProps.stacksTo(1).rarity(Rarity.EPIC), Tier.Four), Constants.ItemName.ServerCreative)
-    registerItem(new item.Server(defaultProps.stacksTo(1), Tier.One), Constants.ItemName.ServerTier1)
-    registerItem(new item.Server(defaultProps.stacksTo(1).rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.ServerTier2)
-    registerItem(new item.Server(defaultProps.stacksTo(1).rarity(Rarity.RARE), Tier.Three), Constants.ItemName.ServerTier3)
+    registerItem(new item.Server(defaultProps.stacksTo(1).rarity(Rarity.EPIC), Tier.Four), Constants.ItemName.SERVER_CREATIVE)
+    registerItem(new item.Server(defaultProps.stacksTo(1), Tier.One), Constants.ItemName.SERVER_TIER_1)
+    registerItem(new item.Server(defaultProps.stacksTo(1).rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.SERVER_TIER_2)
+    registerItem(new item.Server(defaultProps.stacksTo(1).rarity(Rarity.RARE), Tier.Three), Constants.ItemName.SERVER_TIER_3)
 
     // 1.5.10
-    registerItem(new item.APU(defaultProps.rarity(Rarity.UNCOMMON), Tier.One), Constants.ItemName.APUTier1)
-    registerItem(new item.APU(defaultProps.rarity(Rarity.RARE), Tier.Two), Constants.ItemName.APUTier2)
+    registerItem(new item.APU(defaultProps.rarity(Rarity.UNCOMMON), Tier.One), Constants.ItemName.APU_TIER_1)
+    registerItem(new item.APU(defaultProps.rarity(Rarity.RARE), Tier.Two), Constants.ItemName.APU_TIER_2)
 
     // 1.5.12
-    registerItem(new item.APU(defaultProps.rarity(Rarity.EPIC), Tier.Three), Constants.ItemName.APUCreative)
+    registerItem(new item.APU(defaultProps.rarity(Rarity.EPIC), Tier.Three), Constants.ItemName.APU_CREATIVE)
 
     // 1.6
-    registerItem(new item.TerminalServer(defaultProps.stacksTo(1)), Constants.ItemName.TerminalServer)
-    registerItem(new item.DiskDriveMountable(defaultProps.stacksTo(1)), Constants.ItemName.DiskDriveMountable)
+    registerItem(new item.TerminalServer(defaultProps.stacksTo(1)), Constants.ItemName.TERMINAL_SERVER)
+    registerItem(new item.DiskDriveMountable(defaultProps.stacksTo(1)), Constants.ItemName.DISK_DRIVE_MOUNTABLE)
   }
 
   // Card components.
   private def initCards(): Unit = {
-    registerItem(new item.DebugCard(defaultProps), Constants.ItemName.DebugCard)
-    registerItem(new item.GraphicsCard(defaultProps, Tier.One), Constants.ItemName.GraphicsCardTier1)
-    registerItem(new item.GraphicsCard(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.GraphicsCardTier2)
-    registerItem(new item.GraphicsCard(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.GraphicsCardTier3)
-    registerItem(new item.RedstoneCard(defaultProps, Tier.One), Constants.ItemName.RedstoneCardTier1)
-    registerItem(new item.RedstoneCard(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.RedstoneCardTier2)
-    registerItem(new item.NetworkCard(defaultProps), Constants.ItemName.NetworkCard)
-    registerItem(new item.WirelessNetworkCard(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.WirelessNetworkCardTier2)
-    registerItem(new item.InternetCard(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.InternetCard)
-    registerItem(new item.LinkedCard(defaultProps.rarity(Rarity.RARE)), Constants.ItemName.LinkedCard)
+    registerItem(new item.DebugCard(defaultProps), Constants.ItemName.DEBUG_CARD)
+    registerItem(new item.GraphicsCard(defaultProps, Tier.One), Constants.ItemName.GRAPHICS_CARD_TIER_1)
+    registerItem(new item.GraphicsCard(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.GRAPHICS_CARD_TIER_2)
+    registerItem(new item.GraphicsCard(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.GRAPHICS_CARD_TIER_3)
+    registerItem(new item.RedstoneCard(defaultProps, Tier.One), Constants.ItemName.REDSTONE_CARD_TIER_1)
+    registerItem(new item.RedstoneCard(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.REDSTONE_CARD_TIER_2)
+    registerItem(new item.NetworkCard(defaultProps), Constants.ItemName.NETWORK_CARD)
+    registerItem(new item.WirelessNetworkCard(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_2)
+    registerItem(new item.InternetCard(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.INTERNET_CARD)
+    registerItem(new item.LinkedCard(defaultProps.rarity(Rarity.RARE)), Constants.ItemName.LINKED_CARD)
 
     // 1.5.13
-    registerItem(new item.DataCard(defaultProps, Tier.One), Constants.ItemName.DataCardTier1)
+    registerItem(new item.DataCard(defaultProps, Tier.One), Constants.ItemName.DATA_CARD_TIER_1)
 
     // 1.5.15
-    registerItem(new item.DataCard(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.DataCardTier2)
-    registerItem(new item.DataCard(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.DataCardTier3)
+    registerItem(new item.DataCard(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.DATA_CARD_TIER_2)
+    registerItem(new item.DataCard(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.DATA_CARD_TIER_3)
   }
 
   // Upgrade components.
   private def initUpgrades(): Unit = {
-    registerItem(new item.UpgradeAngel(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.AngelUpgrade)
-    registerItem(new item.UpgradeBattery(defaultProps, Tier.One), Constants.ItemName.BatteryUpgradeTier1)
-    registerItem(new item.UpgradeBattery(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.BatteryUpgradeTier2)
-    registerItem(new item.UpgradeBattery(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.BatteryUpgradeTier3)
-    registerItem(new item.UpgradeChunkloader(defaultProps.rarity(Rarity.RARE)), Constants.ItemName.ChunkloaderUpgrade)
-    registerItem(new item.UpgradeContainerCard(defaultProps, Tier.One), Constants.ItemName.CardContainerTier1)
-    registerItem(new item.UpgradeContainerCard(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.CardContainerTier2)
-    registerItem(new item.UpgradeContainerCard(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.CardContainerTier3)
-    registerItem(new item.UpgradeContainerUpgrade(defaultProps, Tier.One), Constants.ItemName.UpgradeContainerTier1)
-    registerItem(new item.UpgradeContainerUpgrade(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.UpgradeContainerTier2)
-    registerItem(new item.UpgradeContainerUpgrade(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.UpgradeContainerTier3)
-    registerItem(new item.UpgradeCrafting(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.CraftingUpgrade)
-    registerItem(new item.UpgradeDatabase(defaultProps, Tier.One), Constants.ItemName.DatabaseUpgradeTier1)
-    registerItem(new item.UpgradeDatabase(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.DatabaseUpgradeTier2)
-    registerItem(new item.UpgradeDatabase(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.DatabaseUpgradeTier3)
-    registerItem(new item.UpgradeExperience(defaultProps.rarity(Rarity.RARE)), Constants.ItemName.ExperienceUpgrade)
-    registerItem(new item.UpgradeGenerator(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.GeneratorUpgrade)
-    registerItem(new item.UpgradeInventory(defaultProps), Constants.ItemName.InventoryUpgrade)
-    registerItem(new item.UpgradeInventoryController(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.InventoryControllerUpgrade)
-    registerItem(new item.UpgradeNavigation(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.NavigationUpgrade)
-    registerItem(new item.UpgradePiston(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.PistonUpgrade)
-    registerItem(new item.UpgradeSign(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.SignUpgrade)
-    registerItem(new item.UpgradeSolarGenerator(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.SolarGeneratorUpgrade)
-    registerItem(new item.UpgradeTank(defaultProps), Constants.ItemName.TankUpgrade)
-    registerItem(new item.UpgradeTankController(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.TankControllerUpgrade)
-    registerItem(new item.UpgradeTractorBeam(defaultProps.rarity(Rarity.RARE)), Constants.ItemName.TractorBeamUpgrade)
-    registerItem(new item.UpgradeLeash(defaultProps), Constants.ItemName.LeashUpgrade)
+    registerItem(new item.UpgradeAngel(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.ANGEL_UPGRADE)
+    registerItem(new item.UpgradeBattery(defaultProps, Tier.One), Constants.ItemName.BATTERY_UPGRADE_TIER_1)
+    registerItem(new item.UpgradeBattery(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.BATTERY_UPGRADE_TIER_2)
+    registerItem(new item.UpgradeBattery(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.BATTERY_UPGRADE_TIER_3)
+    registerItem(new item.UpgradeChunkloader(defaultProps.rarity(Rarity.RARE)), Constants.ItemName.CHUNKLOADER_UPGRADE)
+    registerItem(new item.UpgradeContainerCard(defaultProps, Tier.One), Constants.ItemName.CARD_CONTAINER_TIER_1)
+    registerItem(new item.UpgradeContainerCard(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.CARD_CONTAINER_TIER_2)
+    registerItem(new item.UpgradeContainerCard(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.CARD_CONTAINER_TIER_3)
+    registerItem(new item.UpgradeContainerUpgrade(defaultProps, Tier.One), Constants.ItemName.UPGRADE_CONTAINER_TIER_1)
+    registerItem(new item.UpgradeContainerUpgrade(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.UPGRADE_CONTAINER_TIER_2)
+    registerItem(new item.UpgradeContainerUpgrade(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.UPGRADE_CONTAINER_TIER_3)
+    registerItem(new item.UpgradeCrafting(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.CRAFTING_UPGRADE)
+    registerItem(new item.UpgradeDatabase(defaultProps, Tier.One), Constants.ItemName.DATABASE_UPGRADE_TIER_1)
+    registerItem(new item.UpgradeDatabase(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.DATABASE_UPGRADE_TIER_2)
+    registerItem(new item.UpgradeDatabase(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.DATABASE_UPGRADE_TIER_3)
+    registerItem(new item.UpgradeExperience(defaultProps.rarity(Rarity.RARE)), Constants.ItemName.EXPERIENCE_UPGRADE)
+    registerItem(new item.UpgradeGenerator(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.GENERATOR_UPGRADE)
+    registerItem(new item.UpgradeInventory(defaultProps), Constants.ItemName.INVENTORY_UPGRADE)
+    registerItem(new item.UpgradeInventoryController(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.INVENTORY_CONTROLLER_UPGRADE)
+    registerItem(new item.UpgradeNavigation(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.NAVIGATION_UPGRADE)
+    registerItem(new item.UpgradePiston(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.PISTON_UPGRADE)
+    registerItem(new item.UpgradeSign(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.SIGN_UPGRADE)
+    registerItem(new item.UpgradeSolarGenerator(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.SOLAR_GENERATOR_UPGRADE)
+    registerItem(new item.UpgradeTank(defaultProps), Constants.ItemName.TANK_UPGRADE)
+    registerItem(new item.UpgradeTankController(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.TANK_CONTROLLER_UPGRADE)
+    registerItem(new item.UpgradeTractorBeam(defaultProps.rarity(Rarity.RARE)), Constants.ItemName.TRACTOR_BEAM_UPGRADE)
+    registerItem(new item.UpgradeLeash(defaultProps), Constants.ItemName.LEASH_UPGRADE)
 
     // 1.5.8
-    registerItem(new item.UpgradeHover(defaultProps, Tier.One), Constants.ItemName.HoverUpgradeTier1)
-    registerItem(new item.UpgradeHover(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.HoverUpgradeTier2)
+    registerItem(new item.UpgradeHover(defaultProps, Tier.One), Constants.ItemName.HOVER_UPGRADE_TIER_1)
+    registerItem(new item.UpgradeHover(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.HOVER_UPGRADE_TIER_2)
 
     // 1.6
-    registerItem(new item.UpgradeTrading(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.TradingUpgrade)
+    registerItem(new item.UpgradeTrading(defaultProps.rarity(Rarity.UNCOMMON)), Constants.ItemName.TRADING_UPGRADE)
     registerItem(new item.UpgradeMF(defaultProps.rarity(Rarity.RARE)), Constants.ItemName.MFU)
 
     // 1.7.2
-    registerItem(new item.WirelessNetworkCard(defaultProps, Tier.One), Constants.ItemName.WirelessNetworkCardTier1)
-    registerItem(new item.ComponentBus(defaultProps.rarity(Rarity.EPIC), Tier.Four), Constants.ItemName.ComponentBusCreative)
+    registerItem(new item.WirelessNetworkCard(defaultProps, Tier.One), Constants.ItemName.WIRELESS_NETWORK_CARD_TIER_1)
+    registerItem(new item.ComponentBus(defaultProps.rarity(Rarity.EPIC), Tier.Four), Constants.ItemName.COMPONENT_BUS_CREATIVE)
 
     // 1.8
-    registerItem(new item.UpgradeStickyPiston(defaultProps), Constants.ItemName.StickyPistonUpgrade)
+    registerItem(new item.UpgradeStickyPiston(defaultProps), Constants.ItemName.STICKY_PISTON_UPGRADE)
   }
 
   // Storage media of all kinds.
   private def initStorage(): Unit = {
     registerItem(new item.EEPROM(defaultProps), Constants.ItemName.EEPROM)
-    registerItem(new item.FloppyDisk(defaultProps), Constants.ItemName.Floppy)
-    registerItem(new item.HardDiskDrive(defaultProps, Tier.One), Constants.ItemName.HDDTier1)
-    registerItem(new item.HardDiskDrive(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.HDDTier2)
-    registerItem(new item.HardDiskDrive(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.HDDTier3)
+    registerItem(new item.FloppyDisk(defaultProps), Constants.ItemName.FLOPPY)
+    registerItem(new item.HardDiskDrive(defaultProps, Tier.One), Constants.ItemName.HDD_TIER_1)
+    registerItem(new item.HardDiskDrive(defaultProps.rarity(Rarity.UNCOMMON), Tier.Two), Constants.ItemName.HDD_TIER_2)
+    registerItem(new item.HardDiskDrive(defaultProps.rarity(Rarity.RARE), Tier.Three), Constants.ItemName.HDD_TIER_3)
 
     val luaBios = {
       val code = new Array[Byte](4 * 1024)
       val count = OpenComputers.getClass.getResourceAsStream(Settings.scriptPath + "bios.lua").read(code)
       registerEEPROM("EEPROM (Lua BIOS)", code.take(count), null, readonly = false)
     }
-    registerStack(luaBios, Constants.ItemName.LuaBios)
+    registerStack(luaBios, Constants.ItemName.LUA_BIOS)
 
   }
 
   // Special purpose items that don't fit into any other category.
   private def initSpecial(): Unit = {
-    registerItem(new item.Tablet(defaultProps.stacksTo(1)), Constants.ItemName.Tablet)
-    registerItem(new item.Drone(defaultProps), Constants.ItemName.Drone)
-    registerItem(new item.Present(defaultProps), Constants.ItemName.Present)
+    registerItem(new item.Tablet(defaultProps.stacksTo(1)), Constants.ItemName.TABLET)
+    registerItem(new item.Drone(defaultProps), Constants.ItemName.DRONE)
+    registerItem(new item.Present(defaultProps), Constants.ItemName.PRESENT)
   }
 
   def decorateCreativeTab(list: NonNullList[ItemStack]) {

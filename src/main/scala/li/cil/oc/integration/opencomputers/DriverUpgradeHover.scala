@@ -11,8 +11,8 @@ import net.minecraft.world.item.ItemStack
 
 object DriverUpgradeHover extends Item with HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.HoverUpgradeTier1),
-    api.Items.get(Constants.ItemName.HoverUpgradeTier2))
+    api.Items.get(Constants.ItemName.HOVER_UPGRADE_TIER_1),
+    api.Items.get(Constants.ItemName.HOVER_UPGRADE_TIER_2))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) = null
 

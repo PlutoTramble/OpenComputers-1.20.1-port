@@ -6,7 +6,7 @@ import li.cil.oc.Settings
 import net.minecraft.world.item.ItemStack
 import net.minecraft.nbt.CompoundTag
 
-class NanomachineData extends ItemData(Constants.ItemName.Nanomachines) {
+class NanomachineData extends ItemData(Constants.ItemName.NANOMACHINES) {
   def this(stack: ItemStack) {
     this()
     loadData(stack)

@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack
 
 object DriverUpgradeBarcodeReader extends Item with HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.Analyzer))
+    api.Items.get(Constants.ItemName.ANALYZER))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost): ManagedEnvironment =
     new UpgradeBarcodeReader(host)

@@ -34,7 +34,7 @@ class Drone(val agent: entity.Drone) extends AbstractManagedEnvironment with Age
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.System,
     DeviceAttribute.Description -> "Drone",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Overwatcher",
     DeviceAttribute.Capacity -> agent.inventorySize.toString
   )

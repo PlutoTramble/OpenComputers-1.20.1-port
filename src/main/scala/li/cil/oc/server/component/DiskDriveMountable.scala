@@ -54,7 +54,7 @@ class DiskDriveMountable(val rack: api.internal.Rack, val slot: Int) extends Abs
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Disk,
     DeviceAttribute.Description -> "Floppy disk drive",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "RackDrive 100 Rev. 2"
   )
 

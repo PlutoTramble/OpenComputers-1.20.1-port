@@ -52,7 +52,7 @@ object Loot {
 
   val disksForClient = mutable.ArrayBuffer.empty[ItemStack]
 
-  def isLootDisk(stack: ItemStack): Boolean = api.Items.get(stack) == api.Items.get(Constants.ItemName.Floppy) && stack.hasTag && stack.getTag.contains(Settings.namespace + "lootFactory", Tag.TAG_STRING)
+  def isLootDisk(stack: ItemStack): Boolean = api.Items.get(stack) == api.Items.get(Constants.ItemName.FLOPPY) && stack.hasTag && stack.getTag.contains(Settings.namespace + "lootFactory", Tag.TAG_STRING)
 
   def randomDisk(rng: Random) =
     if (disksForSampling.nonEmpty) Some(disksForSampling(rng.nextInt(disksForSampling.length)))
@@ -64,7 +64,7 @@ object Loot {
     val data = new CompoundTag()
     data.putString(Settings.namespace + "fs.label", name)
 
-    val stack = Items.get(Constants.ItemName.Floppy).createItemStack(1)
+    val stack = Items.get(Constants.ItemName.FLOPPY).createItemStack(1)
     val nbt = stack.getOrCreateTag
     nbt.put(Settings.namespace + "data", data)
 

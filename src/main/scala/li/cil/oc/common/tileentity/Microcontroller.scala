@@ -54,7 +54,7 @@ class Microcontroller(selfType: BlockEntityType[_ <: Microcontroller], pos: Bloc
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.System,
     DeviceAttribute.Description -> "Microcontroller",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Cubicle",
     DeviceAttribute.Capacity -> getContainerSize.toString
   )

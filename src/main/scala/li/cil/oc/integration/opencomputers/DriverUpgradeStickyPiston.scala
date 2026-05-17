@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack
 
 object DriverUpgradeStickyPiston extends Item with HostAware {
   override def worksWith(stack: ItemStack): Boolean = isOneOf(stack,
-    api.Items.get(Constants.ItemName.StickyPistonUpgrade))
+    api.Items.get(Constants.ItemName.STICKY_PISTON_UPGRADE))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost): ManagedEnvironment =
     if (host.world != null && host.world.isClientSide) null

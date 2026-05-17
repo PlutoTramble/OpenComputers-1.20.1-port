@@ -39,7 +39,7 @@ class TerminalServer(val rack: api.internal.Rack, val slot: Int) extends Environ
   val node = api.Network.newNode(this, Visibility.None).create()
 
   lazy val buffer = {
-    val screenItem = api.Items.get(Constants.BlockName.ScreenTier1).createItemStack(1)
+    val screenItem = api.Items.get(Constants.BlockName.SCREEN_TIER_1).createItemStack(1)
     val buffer = api.Driver.driverFor(screenItem, getClass).createEnvironment(screenItem, this).asInstanceOf[api.internal.TextBuffer]
     val (maxWidth, maxHeight) = Settings.screenResolutionsByTier(Tier.Three)
     buffer.setMaximumResolution(maxWidth, maxHeight)
@@ -48,7 +48,7 @@ class TerminalServer(val rack: api.internal.Rack, val slot: Int) extends Environ
   }
 
   lazy val keyboard = {
-    val keyboardItem = api.Items.get(Constants.BlockName.Keyboard).createItemStack(1)
+    val keyboardItem = api.Items.get(Constants.BlockName.KEYBOARD).createItemStack(1)
     val keyboard = api.Driver.driverFor(keyboardItem, getClass).createEnvironment(keyboardItem, this).asInstanceOf[api.internal.Keyboard]
     keyboard.setUsableOverride(new UsabilityChecker {
       override def isUsableByPlayer(keyboard: api.internal.Keyboard, player: Player) = {
@@ -88,7 +88,7 @@ class TerminalServer(val rack: api.internal.Rack, val slot: Int) extends Environ
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Terminal server",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "RemoteViewing EX"
   )
 
@@ -145,7 +145,7 @@ class TerminalServer(val rack: api.internal.Rack, val slot: Int) extends Environ
   override def getConnectableAt(index: Int): RackBusConnectable = null
 
   override def onActivate(player: Player, hand: InteractionHand, heldItem: ItemStack, hitX: Float, hitY: Float): Boolean = {
-    if (api.Items.get(heldItem) == api.Items.get(Constants.ItemName.Terminal)) {
+    if (api.Items.get(heldItem) == api.Items.get(Constants.ItemName.TERMINAL)) {
       if (!world.isClientSide) {
         val key = UUID.randomUUID().toString
         keys -= heldItem.getOrCreateTag.getString(Settings.namespace + "key")

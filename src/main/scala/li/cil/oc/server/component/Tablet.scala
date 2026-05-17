@@ -27,7 +27,7 @@ class Tablet(val tablet: TabletWrapper) extends AbstractManagedEnvironment with 
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.System,
     DeviceAttribute.Description -> "Tablet",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Jogger",
     DeviceAttribute.Capacity -> tablet.getContainerSize.toString
   )

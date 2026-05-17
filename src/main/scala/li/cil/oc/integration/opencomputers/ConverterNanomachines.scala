@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack
 import scala.collection.convert.ImplicitConversionsToScala._
 
 object ConverterNanomachines extends Converter {
-  lazy val nanomachines = api.Items.get(Constants.ItemName.Nanomachines)
+  lazy val nanomachines = api.Items.get(Constants.ItemName.NANOMACHINES)
 
   override def convert(value: scala.Any, output: util.Map[AnyRef, AnyRef]): Unit = value match {
     case stack: ItemStack if api.Items.get(stack) == nanomachines =>

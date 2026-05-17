@@ -22,10 +22,10 @@ object DriverFileSystem extends Item {
   val UUIDVerifier = """^([0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12})$""".r
 
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.HDDTier1),
-    api.Items.get(Constants.ItemName.HDDTier2),
-    api.Items.get(Constants.ItemName.HDDTier3),
-    api.Items.get(Constants.ItemName.Floppy)) &&
+    api.Items.get(Constants.ItemName.HDD_TIER_1),
+    api.Items.get(Constants.ItemName.HDD_TIER_2),
+    api.Items.get(Constants.ItemName.HDD_TIER_3),
+    api.Items.get(Constants.ItemName.FLOPPY)) &&
     (!stack.hasTag || !stack.getTag.contains(Settings.namespace + "lootPath"))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
@@ -69,7 +69,7 @@ object DriverFileSystem extends Item {
       // if necessary. No one will know, right? Right!?
       val address = addressFromTag(dataTag(stack))
       var label: api.fs.Label = new ReadWriteItemLabel(stack)
-      val isFloppy = api.Items.get(stack) == api.Items.get(Constants.ItemName.Floppy)
+      val isFloppy = api.Items.get(stack) == api.Items.get(Constants.ItemName.FLOPPY)
       val sound = Settings.resourceDomain + ":" + (if (isFloppy) "floppy_access" else "hdd_access")
       val drive = new DriveData(stack)
       val environment = if (drive.isUnmanaged) {

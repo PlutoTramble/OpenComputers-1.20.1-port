@@ -17,8 +17,8 @@ import net.minecraft.world.item.ItemStack
 
 object DriverRedstoneCard extends Item with HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.RedstoneCardTier1),
-    api.Items.get(Constants.ItemName.RedstoneCardTier2))
+    api.Items.get(Constants.ItemName.REDSTONE_CARD_TIER_1),
+    api.Items.get(Constants.ItemName.REDSTONE_CARD_TIER_2))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

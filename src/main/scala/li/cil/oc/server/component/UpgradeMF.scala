@@ -43,7 +43,7 @@ class UpgradeMF(val host: EnvironmentHost, val coord: BlockPosition, val dir: Di
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Bus,
     DeviceAttribute.Description -> "Remote Adapter",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.Scummtech,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.SCUMMTECH,
     DeviceAttribute.Product -> "ERR NAME NOT FOUND"
   )
 

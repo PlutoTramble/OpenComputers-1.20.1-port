@@ -40,7 +40,7 @@ class Hologram(selfType: BlockEntityType[_ <: Hologram], pos: BlockPos, state: B
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Display,
     DeviceAttribute.Description -> "Holographic projector",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> ("VirtualViewer H1-" + (tier + 1).toString),
     DeviceAttribute.Capacity -> (width * width * height).toString,
     DeviceAttribute.Width -> colors.length.toString

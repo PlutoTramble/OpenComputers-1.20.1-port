@@ -25,7 +25,7 @@ object UpgradeTankController {
     private final lazy val deviceInfo = Map(
       DeviceAttribute.Class -> DeviceClass.Generic,
       DeviceAttribute.Description -> "Tank controller",
-      DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+      DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
       DeviceAttribute.Product -> "FlowCheckDX"
     )
 

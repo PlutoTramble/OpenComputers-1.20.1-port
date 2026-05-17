@@ -13,9 +13,9 @@ import net.minecraft.world.item.ItemStack
 
 object DriverUpgradeDatabase extends Item with api.driver.item.HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.DatabaseUpgradeTier1),
-    api.Items.get(Constants.ItemName.DatabaseUpgradeTier2),
-    api.Items.get(Constants.ItemName.DatabaseUpgradeTier3))
+    api.Items.get(Constants.ItemName.DATABASE_UPGRADE_TIER_1),
+    api.Items.get(Constants.ItemName.DATABASE_UPGRADE_TIER_2),
+    api.Items.get(Constants.ItemName.DATABASE_UPGRADE_TIER_3))
 
   override def createEnvironment(stack: ItemStack, host: api.network.EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

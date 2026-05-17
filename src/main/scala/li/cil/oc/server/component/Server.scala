@@ -55,7 +55,7 @@ class Server(val rack: api.internal.Rack, val slot: Int) extends Environment wit
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.System,
     DeviceAttribute.Description -> "Server",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Blader",
     DeviceAttribute.Capacity -> getContainerSize.toString
   )

@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack
 
 object DriverTerminalServer extends Item with HostAware {
   override def worksWith(stack: ItemStack): Boolean = isOneOf(stack,
-    api.Items.get(Constants.ItemName.TerminalServer))
+    api.Items.get(Constants.ItemName.TERMINAL_SERVER))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost): ManagedEnvironment = host match {
     case rack: api.internal.Rack => new TerminalServer(rack, rack.indexOf(stack))

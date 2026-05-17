@@ -1,8 +1,6 @@
 package li.cil.oc.common.template
 
-import li.cil.oc.Constants
-import li.cil.oc.Settings
-import li.cil.oc.api
+import li.cil.oc.{Constants, SConstants, Settings, api}
 import li.cil.oc.api.internal
 import li.cil.oc.common.Slot
 import li.cil.oc.common.Tier
@@ -17,24 +15,24 @@ import scala.collection.convert.ImplicitConversionsToJava._
 object TabletTemplate extends Template {
   override protected val suggestedComponents = Array(
     "BIOS" -> hasComponent(Constants.ItemName.EEPROM) _,
-    "Keyboard" -> hasComponent(Constants.BlockName.Keyboard) _,
+    "Keyboard" -> hasComponent(Constants.BlockName.KEYBOARD) _,
     "GraphicsCard" -> ((inventory: Container) => Array(
-      Constants.ItemName.APUCreative,
-      Constants.ItemName.APUTier1,
-      Constants.ItemName.APUTier2,
-      Constants.ItemName.GraphicsCardTier1,
-      Constants.ItemName.GraphicsCardTier2,
-      Constants.ItemName.GraphicsCardTier3).
+      Constants.ItemName.APU_CREATIVE,
+      Constants.ItemName.APU_TIER_1,
+      Constants.ItemName.APU_TIER_2,
+      Constants.ItemName.GRAPHICS_CARD_TIER_1,
+      Constants.ItemName.GRAPHICS_CARD_TIER_2,
+      Constants.ItemName.GRAPHICS_CARD_TIER_3).
       exists(name => hasComponent(name)(inventory))),
     "OS" -> hasFileSystem _)
 
   override protected def hostClass = classOf[internal.Tablet]
 
-  def selectTier1(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.ItemName.TabletCaseTier1)
+  def selectTier1(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.ItemName.TABLET_CASE_TIER_1)
 
-  def selectTier2(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.ItemName.TabletCaseTier2)
+  def selectTier2(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.ItemName.TABLET_CASE_TIER_2)
 
-  def selectCreative(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.ItemName.TabletCaseCreative)
+  def selectCreative(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.ItemName.TABLET_CASE_CREATIVE)
 
   def validate(inventory: Container): Array[AnyRef] = validateComputer(inventory)
 
@@ -43,21 +41,21 @@ object TabletTemplate extends Template {
     val data = new TabletData()
     data.tier = ItemUtils.caseTier(inventory.getItem(0))
     data.container = items.headOption.getOrElse(ItemStack.EMPTY)
-    data.items = Array(api.Items.get(Constants.BlockName.ScreenTier1).createItemStack(1)) ++ items.drop(if (data.tier == Tier.One) 0 else 1).filter(!_.isEmpty)
+    data.items = Array(api.Items.get(Constants.BlockName.SCREEN_TIER_1).createItemStack(1)) ++ items.drop(if (data.tier == Tier.One) 0 else 1).filter(!_.isEmpty)
     data.energy = Settings.get.bufferTablet
     data.maxEnergy = data.energy
-    val stack = api.Items.get(Constants.ItemName.Tablet).createItemStack(1)
+    val stack = api.Items.get(Constants.ItemName.TABLET).createItemStack(1)
     data.saveData(stack)
     val energy = Settings.get.tabletBaseCost + complexity(inventory) * Settings.get.tabletComplexityCost
 
     Array(stack, Double.box(energy))
   }
 
-  def selectDisassembler(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.ItemName.Tablet)
+  def selectDisassembler(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.ItemName.TABLET)
 
   def disassemble(stack: ItemStack, ingredients: Array[ItemStack]) = {
     val info = new TabletData(stack)
-    val itemName = Constants.ItemName.TabletCase(info.tier)
+    val itemName = SConstants.ItemName.TabletCase(info.tier)
     (Array(api.Items.get(itemName).createItemStack(1), info.container) ++ info.items.filter(!_.isEmpty).drop(1) /* Screen */).filter(!_.isEmpty)
   }
 

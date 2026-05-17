@@ -10,7 +10,7 @@ import net.minecraft.world.item.ItemStack
 
 object DriverKeyboard extends Item with HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.BlockName.Keyboard))
+    api.Items.get(Constants.BlockName.KEYBOARD))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) = new component.Keyboard(host)
 

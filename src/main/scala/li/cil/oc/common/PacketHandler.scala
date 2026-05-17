@@ -93,7 +93,7 @@ abstract class PacketHandler {
           // In case a robot moved away before the packet arrived. This is
           // mostly used when the robot *starts* moving while the client sends
           // a request to the server.
-          api.Items.get(Constants.BlockName.RobotAfterimage).block match {
+          api.Items.get(Constants.BlockName.ROBOT_AFTER_IMAGE).block match {
             case afterimage: RobotAfterimage => afterimage.findMovingRobot(world, new BlockPos(x, y, z)) match {
               case Some(robot) if classTag[T].runtimeClass.isAssignableFrom(robot.proxy.getClass) =>
                 return Some(robot.proxy.asInstanceOf[T])

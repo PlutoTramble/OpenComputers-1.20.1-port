@@ -52,7 +52,7 @@ abstract class UpgradePiston(val host: EnvironmentHost) extends AbstractManagedE
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Piston upgrade",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Displacer II+"
   )
 

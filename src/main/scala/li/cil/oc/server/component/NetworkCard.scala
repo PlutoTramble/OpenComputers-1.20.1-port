@@ -47,7 +47,7 @@ class NetworkCard(val host: EnvironmentHost) extends AbstractManagedEnvironment 
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Network,
     DeviceAttribute.Description -> "Ethernet controller",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "42i520 (MPN-01)",
     DeviceAttribute.Version -> "1.0",
     DeviceAttribute.Capacity -> Settings.get.maxNetworkPacketSize.toString,

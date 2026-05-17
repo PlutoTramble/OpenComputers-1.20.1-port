@@ -15,7 +15,7 @@ import net.minecraft.world.item.ItemStack
 
 object DriverUpgradeTankController extends Item with HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.TankControllerUpgrade))
+    api.Items.get(Constants.ItemName.TANK_CONTROLLER_UPGRADE))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

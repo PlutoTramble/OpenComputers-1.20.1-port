@@ -10,9 +10,9 @@ import scala.language.postfixOps
 
 object ServerTemplate {
   def selectDisassembler(stack: ItemStack) =
-    api.Items.get(stack) == api.Items.get(Constants.ItemName.ServerTier1) ||
-      api.Items.get(stack) == api.Items.get(Constants.ItemName.ServerTier2) ||
-      api.Items.get(stack) == api.Items.get(Constants.ItemName.ServerTier3)
+    api.Items.get(stack) == api.Items.get(Constants.ItemName.SERVER_TIER_1) ||
+      api.Items.get(stack) == api.Items.get(Constants.ItemName.SERVER_TIER_2) ||
+      api.Items.get(stack) == api.Items.get(Constants.ItemName.SERVER_TIER_3)
 
   def disassemble(stack: ItemStack, ingredients: Array[ItemStack]) = {
     val info = new ServerInventory {

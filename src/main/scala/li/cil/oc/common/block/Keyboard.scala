@@ -104,7 +104,7 @@ class Keyboard(props: Properties) extends SimpleBlock(props) {
   override def neighborChanged(state: BlockState, world: Level, pos: BlockPos, block: Block, fromPos: BlockPos, b: Boolean): Unit =
     if (!canSurvive(world.getBlockState(pos), world, pos)) {
       world.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState)
-      InventoryUtils.spawnStackInLevel(BlockPosition(pos, world), api.Items.get(Constants.BlockName.Keyboard).createItemStack(1))
+      InventoryUtils.spawnStackInLevel(BlockPosition(pos, world), api.Items.get(Constants.BlockName.KEYBOARD).createItemStack(1))
     }
 
   override def localOnBlockActivated(world: Level, pos: BlockPos, player: Player, hand: InteractionHand, heldItem: ItemStack, side: Direction, hitX: Float, hitY: Float, hitZ: Float) =

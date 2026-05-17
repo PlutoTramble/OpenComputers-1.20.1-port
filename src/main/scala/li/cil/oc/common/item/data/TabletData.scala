@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.nbt.Tag
 
-class TabletData extends ItemData(Constants.ItemName.Tablet) {
+class TabletData extends ItemData(Constants.ItemName.TABLET) {
   def this(stack: ItemStack) {
     this()
     loadData(stack)

@@ -26,7 +26,7 @@ object ColorHandler {
       case block: block.Cable => block.colorMultiplierOverride.getOrElse(0xFFFFFFFF)
       case _ => 0xFFFFFFFF
     },
-      api.Items.get(Constants.BlockName.Cable).block())
+      api.Items.get(Constants.BlockName.CABLE).block())
 
     register((state, world, pos, tintIndex) => if (pos == null) 0xFFFFFFFF else world.getBlockEntity(pos) match {
       case colored: Colored => colored.getColor
@@ -35,49 +35,49 @@ object ColorHandler {
         case _ => 0xFFFFFFFF
       }
     },
-      api.Items.get(Constants.BlockName.CaseTier1).block(),
-      api.Items.get(Constants.BlockName.CaseTier2).block(),
-      api.Items.get(Constants.BlockName.CaseTier3).block(),
-      api.Items.get(Constants.BlockName.CaseCreative).block())
+      api.Items.get(Constants.BlockName.CASE_TIER_1).block(),
+      api.Items.get(Constants.BlockName.CASE_TIER_2).block(),
+      api.Items.get(Constants.BlockName.CASE_TIER_3).block(),
+      api.Items.get(Constants.BlockName.CASE_CREATIVE).block())
 
     register((state, world, pos, tintIndex) => Color.rgbValues(state.getValue(block.ChameliumBlock.Color)),
-      api.Items.get(Constants.BlockName.ChameliumBlock).block())
+      api.Items.get(Constants.BlockName.CHAMELIUM_BLOCK).block())
 
     register((state, world, pos, tintIndex) => tintIndex,
-      api.Items.get(Constants.BlockName.Print).block())
+      api.Items.get(Constants.BlockName.PRINT).block())
 
     register((state, world, pos, tintIndex) => state.getBlock match {
       case block: block.Screen => Color.rgbValues(Color.byTier(block.tier))
       case _ => 0xFFFFFFFF
     },
-      api.Items.get(Constants.BlockName.ScreenTier1).block(),
-      api.Items.get(Constants.BlockName.ScreenTier2).block(),
-      api.Items.get(Constants.BlockName.ScreenTier3).block())
+      api.Items.get(Constants.BlockName.SCREEN_TIER_1).block(),
+      api.Items.get(Constants.BlockName.SCREEN_TIER_2).block(),
+      api.Items.get(Constants.BlockName.SCREEN_TIER_3).block())
 
     register(0,(stack, tintIndex) => if (ItemColorizer.hasColor(stack)) ItemColorizer.getColor(stack) else tintIndex,
-      api.Items.get(Constants.BlockName.Cable).block())
+      api.Items.get(Constants.BlockName.CABLE).block())
 
     register((stack, tintIndex) => Color.rgbValues(Color.byTier(ItemUtils.caseTier(stack))),
-      api.Items.get(Constants.BlockName.CaseTier1).item(),
-      api.Items.get(Constants.BlockName.CaseTier2).item(),
-      api.Items.get(Constants.BlockName.CaseTier3).item(),
-      api.Items.get(Constants.BlockName.CaseCreative).item())
+      api.Items.get(Constants.BlockName.CASE_TIER_1).item(),
+      api.Items.get(Constants.BlockName.CASE_TIER_2).item(),
+      api.Items.get(Constants.BlockName.CASE_TIER_3).item(),
+      api.Items.get(Constants.BlockName.CASE_CREATIVE).item())
 
     register(0,(stack, tintIndex) => Color.rgbValues(DyeColor.byId(stack.getDamageValue)),
-      api.Items.get(Constants.BlockName.ChameliumBlock).block())
+      api.Items.get(Constants.BlockName.CHAMELIUM_BLOCK).block())
 
     register(0,(stack, tintIndex) => tintIndex,
-      api.Items.get(Constants.BlockName.ScreenTier1).block(),
-      api.Items.get(Constants.BlockName.ScreenTier2).block(),
-      api.Items.get(Constants.BlockName.ScreenTier3).block(),
-      api.Items.get(Constants.BlockName.Print).block(),
-      api.Items.get(Constants.BlockName.Robot).block())
+      api.Items.get(Constants.BlockName.SCREEN_TIER_1).block(),
+      api.Items.get(Constants.BlockName.SCREEN_TIER_2).block(),
+      api.Items.get(Constants.BlockName.SCREEN_TIER_3).block(),
+      api.Items.get(Constants.BlockName.PRINT).block(),
+      api.Items.get(Constants.BlockName.ROBOT).block())
 
     register((stack, tintIndex) =>
       if (tintIndex == 1) {
         if (ItemColorizer.hasColor(stack)) ItemColorizer.getColor(stack) else 0x66DD55
       } else 0xFFFFFF,
-      api.Items.get(Constants.ItemName.HoverBoots).item())
+      api.Items.get(Constants.ItemName.HOVER_BOOTS).item())
   }
 
   def register(handler: (BlockState, BlockGetter, BlockPos, Int) => Int, blocks: Block*): Unit = {

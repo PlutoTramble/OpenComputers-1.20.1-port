@@ -13,9 +13,9 @@ import net.minecraft.world.item.ItemStack
 
 object DriverGraphicsCard extends Item with HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.GraphicsCardTier1),
-    api.Items.get(Constants.ItemName.GraphicsCardTier2),
-    api.Items.get(Constants.ItemName.GraphicsCardTier3))
+    api.Items.get(Constants.ItemName.GRAPHICS_CARD_TIER_1),
+    api.Items.get(Constants.ItemName.GRAPHICS_CARD_TIER_2),
+    api.Items.get(Constants.ItemName.GRAPHICS_CARD_TIER_3))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

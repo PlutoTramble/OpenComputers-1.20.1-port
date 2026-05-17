@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack
 import scala.language.postfixOps
 
 object NavigationUpgradeTemplate {
-  def selectDisassembler(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.ItemName.NavigationUpgrade)
+  def selectDisassembler(stack: ItemStack) = api.Items.get(stack) == api.Items.get(Constants.ItemName.NAVIGATION_UPGRADE)
 
   def disassemble(stack: ItemStack, ingredients: Array[ItemStack]) = {
     val info = new NavigationUpgradeData(stack)

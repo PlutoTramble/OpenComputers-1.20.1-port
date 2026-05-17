@@ -33,7 +33,7 @@ class Terminal(props: Properties) extends Item(props) with IForgeItem with trait
 
   @OnlyIn(Dist.CLIENT)
   private def modelLocationFromState(running: Boolean) = {
-    new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.ItemName.Terminal + (if (running) "_on" else "_off"), "inventory")
+    new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.ItemName.TERMINAL + (if (running) "_on" else "_off"), "inventory")
   }
 
   @OnlyIn(Dist.CLIENT)

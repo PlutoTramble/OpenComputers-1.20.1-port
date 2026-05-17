@@ -12,9 +12,9 @@ import net.minecraft.world.item.ItemStack
 
 object DriverDataCard extends Item {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.DataCardTier1),
-    api.Items.get(Constants.ItemName.DataCardTier2),
-    api.Items.get(Constants.ItemName.DataCardTier3))
+    api.Items.get(Constants.ItemName.DATA_CARD_TIER_1),
+    api.Items.get(Constants.ItemName.DATA_CARD_TIER_2),
+    api.Items.get(Constants.ItemName.DATA_CARD_TIER_3))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

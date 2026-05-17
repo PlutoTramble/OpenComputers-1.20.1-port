@@ -22,19 +22,19 @@ import net.minecraft.world.item.{BlockItem, ItemStack}
 object EnvironmentProviderBlocks extends EnvironmentProvider {
   override def getEnvironment(stack: ItemStack): Class[_] = stack.getItem match {
     case block: BlockItem if block.getBlock != null =>
-      if (isOneOf(block.getBlock, Constants.BlockName.Assembler)) classOf[tileentity.Assembler]
-      else if (isOneOf(block.getBlock, Constants.BlockName.CaseTier1, Constants.BlockName.CaseTier2, Constants.BlockName.CaseTier3, Constants.BlockName.CaseCreative, Constants.BlockName.Microcontroller)) classOf[Machine]
-      else if (isOneOf(block.getBlock, Constants.BlockName.HologramTier1, Constants.BlockName.HologramTier2)) classOf[tileentity.Hologram]
-      else if (isOneOf(block.getBlock, Constants.BlockName.Printer)) classOf[tileentity.Printer]
-      else if (isOneOf(block.getBlock, Constants.BlockName.Relay)) classOf[tileentity.Relay]
-      else if (isOneOf(block.getBlock, Constants.BlockName.Redstone)) if (BundledRedstone.isAvailable) classOf[component.Redstone.Bundled] else classOf[component.Redstone.Vanilla]
-      else if (isOneOf(block.getBlock, Constants.BlockName.ScreenTier1)) classOf[common.component.TextBuffer]: Class[_ <: Environment]
-      else if (isOneOf(block.getBlock, Constants.BlockName.ScreenTier2, Constants.BlockName.ScreenTier3)) classOf[common.component.Screen]
-      else if (isOneOf(block.getBlock, Constants.BlockName.Robot)) classOf[component.Robot]: Class[_ <: Environment]
-      else if (isOneOf(block.getBlock, Constants.BlockName.Waypoint)) classOf[tileentity.Waypoint]: Class[_ <: Environment]
+      if (isOneOf(block.getBlock, Constants.BlockName.ASSEMBLER)) classOf[tileentity.Assembler]
+      else if (isOneOf(block.getBlock, Constants.BlockName.CASE_TIER_1, Constants.BlockName.CASE_TIER_2, Constants.BlockName.CASE_TIER_3, Constants.BlockName.CASE_CREATIVE, Constants.BlockName.MICROCONTROLLER)) classOf[Machine]
+      else if (isOneOf(block.getBlock, Constants.BlockName.HOLOGRAM_TIER_1, Constants.BlockName.HOLOGRAM_TIER_2)) classOf[tileentity.Hologram]
+      else if (isOneOf(block.getBlock, Constants.BlockName.PRINTER)) classOf[tileentity.Printer]
+      else if (isOneOf(block.getBlock, Constants.BlockName.RELAY)) classOf[tileentity.Relay]
+      else if (isOneOf(block.getBlock, Constants.BlockName.REDSTONE)) if (BundledRedstone.isAvailable) classOf[component.Redstone.Bundled] else classOf[component.Redstone.Vanilla]
+      else if (isOneOf(block.getBlock, Constants.BlockName.SCREEN_TIER_1)) classOf[common.component.TextBuffer]: Class[_ <: Environment]
+      else if (isOneOf(block.getBlock, Constants.BlockName.SCREEN_TIER_2, Constants.BlockName.SCREEN_TIER_3)) classOf[common.component.Screen]
+      else if (isOneOf(block.getBlock, Constants.BlockName.ROBOT)) classOf[component.Robot]: Class[_ <: Environment]
+      else if (isOneOf(block.getBlock, Constants.BlockName.WAYPOINT)) classOf[tileentity.Waypoint]: Class[_ <: Environment]
       else null
     case _ =>
-      if (api.Items.get(stack) == api.Items.get(Constants.ItemName.Drone)) classOf[component.Drone]: Class[_ <: Environment]
+      if (api.Items.get(stack) == api.Items.get(Constants.ItemName.DRONE)) classOf[component.Drone]: Class[_ <: Environment]
       else null
   }
 

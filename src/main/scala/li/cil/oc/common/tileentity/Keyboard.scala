@@ -19,7 +19,7 @@ class Keyboard(selfType: BlockEntityType[_ <: Keyboard], pos: BlockPos, state: B
   override def validFacings = Direction.values
 
   val keyboard = {
-    val keyboardItem = api.Items.get(Constants.BlockName.Keyboard).createItemStack(1)
+    val keyboardItem = api.Items.get(Constants.BlockName.KEYBOARD).createItemStack(1)
     api.Driver.driverFor(keyboardItem, getClass).createEnvironment(keyboardItem, this)
   }
 

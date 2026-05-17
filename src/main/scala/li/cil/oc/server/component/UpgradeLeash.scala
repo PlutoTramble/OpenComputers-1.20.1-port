@@ -38,7 +38,7 @@ class UpgradeLeash(val host: Entity) extends AbstractManagedEnvironment with tra
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Leash",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "FlockControl (FC-3LS)",
     DeviceAttribute.Capacity -> MaxLeashedEntities.toString
   )

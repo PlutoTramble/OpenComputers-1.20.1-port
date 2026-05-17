@@ -18,12 +18,12 @@ object DriverMemory extends Item with api.driver.item.Memory with api.driver.ite
   }
 
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.RAMTier1),
-    api.Items.get(Constants.ItemName.RAMTier2),
-    api.Items.get(Constants.ItemName.RAMTier3),
-    api.Items.get(Constants.ItemName.RAMTier4),
-    api.Items.get(Constants.ItemName.RAMTier5),
-    api.Items.get(Constants.ItemName.RAMTier6))
+    api.Items.get(Constants.ItemName.RAM_TIER_1),
+    api.Items.get(Constants.ItemName.RAM_TIER_2),
+    api.Items.get(Constants.ItemName.RAM_TIER_3),
+    api.Items.get(Constants.ItemName.RAM_TIER_4),
+    api.Items.get(Constants.ItemName.RAM_TIER_5),
+    api.Items.get(Constants.ItemName.RAM_TIER_6))
 
   override def createEnvironment(stack: ItemStack, host: api.network.EnvironmentHost) = new component.Memory(tier(stack))
 

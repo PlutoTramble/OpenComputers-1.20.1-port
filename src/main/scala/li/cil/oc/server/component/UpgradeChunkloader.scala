@@ -33,7 +33,7 @@ class UpgradeChunkloader(val host: EnvironmentHost) extends AbstractManagedEnvir
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Level stabilizer",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Realizer9001-CL"
   )
 

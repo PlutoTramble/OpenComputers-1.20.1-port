@@ -11,9 +11,9 @@ import net.minecraft.world.item.ItemStack
 
 object DriverContainerCard extends Item with Container {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.CardContainerTier1),
-    api.Items.get(Constants.ItemName.CardContainerTier2),
-    api.Items.get(Constants.ItemName.CardContainerTier3))
+    api.Items.get(Constants.ItemName.CARD_CONTAINER_TIER_1),
+    api.Items.get(Constants.ItemName.CARD_CONTAINER_TIER_2),
+    api.Items.get(Constants.ItemName.CARD_CONTAINER_TIER_3))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) = null
 

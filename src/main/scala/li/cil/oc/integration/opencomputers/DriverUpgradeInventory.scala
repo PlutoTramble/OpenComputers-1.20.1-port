@@ -10,7 +10,7 @@ import net.minecraft.world.item.ItemStack
 
 object DriverUpgradeInventory extends Item with Inventory with HostAware {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.InventoryUpgrade))
+    api.Items.get(Constants.ItemName.INVENTORY_UPGRADE))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) = null
 

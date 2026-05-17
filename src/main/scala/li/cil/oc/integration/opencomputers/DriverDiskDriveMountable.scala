@@ -13,7 +13,7 @@ import net.minecraft.nbt.CompoundTag
 
 object DriverDiskDriveMountable extends Item with HostAware {
   override def worksWith(stack: ItemStack): Boolean = isOneOf(stack,
-    api.Items.get(Constants.ItemName.DiskDriveMountable))
+    api.Items.get(Constants.ItemName.DISK_DRIVE_MOUNTABLE))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost): ManagedEnvironment = host match {
     case rack: api.internal.Rack => new component.DiskDriveMountable(rack, rack.indexOf(stack))

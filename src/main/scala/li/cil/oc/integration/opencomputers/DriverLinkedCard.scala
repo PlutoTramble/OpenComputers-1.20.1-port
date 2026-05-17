@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack
 
 object DriverLinkedCard extends Item {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.LinkedCard))
+    api.Items.get(Constants.ItemName.LINKED_CARD))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

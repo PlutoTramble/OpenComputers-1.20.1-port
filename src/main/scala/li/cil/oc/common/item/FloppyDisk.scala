@@ -24,7 +24,7 @@ class FloppyDisk(props: Properties) extends Item(props) with IForgeItem with tra
 
   @OnlyIn(Dist.CLIENT)
   private def modelLocationFromDyeName(dye: DyeColor) = {
-    new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.ItemName.Floppy + "_" + dye.getName, "inventory")
+    new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.ItemName.FLOPPY + "_" + dye.getName, "inventory")
   }
 
   @OnlyIn(Dist.CLIENT)

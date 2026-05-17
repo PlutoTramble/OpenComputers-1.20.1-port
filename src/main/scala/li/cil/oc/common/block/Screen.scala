@@ -57,7 +57,7 @@ class Screen(props: Properties, val tier: Int) extends RedstoneAware(props) {
   def rightClick(world: Level, pos: BlockPos, player: Player, hand: InteractionHand, heldItem: ItemStack,
                  side: Direction, hitX: Float, hitY: Float, hitZ: Float, force: Boolean) = {
     if (Wrench.holdsApplicableWrench(player, pos) && getValidRotations(world, pos).contains(side) && !force) false
-    else if (api.Items.get(heldItem) == api.Items.get(Constants.ItemName.Analyzer)) false
+    else if (api.Items.get(heldItem) == api.Items.get(Constants.ItemName.ANALYZER)) false
     else world.getBlockEntity(pos) match {
       case screen: tileentity.Screen if screen.hasKeyboard && (force || player.isCrouching == screen.origin.invertTouchMode) =>
         // Yep, this GUI is actually purely client side (to trigger it from

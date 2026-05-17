@@ -10,7 +10,7 @@ import net.minecraft.world.item.ItemStack
 
 object DriverDebugCard extends Item {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.DebugCard))
+    api.Items.get(Constants.ItemName.DEBUG_CARD))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) =
     if (host.world != null && host.world.isClientSide) null

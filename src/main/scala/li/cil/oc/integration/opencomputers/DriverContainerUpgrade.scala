@@ -11,9 +11,9 @@ import net.minecraft.world.item.ItemStack
 
 object DriverContainerUpgrade extends Item with Container {
   override def worksWith(stack: ItemStack) = isOneOf(stack,
-    api.Items.get(Constants.ItemName.UpgradeContainerTier1),
-    api.Items.get(Constants.ItemName.UpgradeContainerTier2),
-    api.Items.get(Constants.ItemName.UpgradeContainerTier3))
+    api.Items.get(Constants.ItemName.UPGRADE_CONTAINER_TIER_1),
+    api.Items.get(Constants.ItemName.UPGRADE_CONTAINER_TIER_2),
+    api.Items.get(Constants.ItemName.UPGRADE_CONTAINER_TIER_3))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost) = null
 

@@ -6,7 +6,7 @@ import li.cil.oc.server.component.DebugCard.AccessContext
 import net.minecraft.world.item.ItemStack
 import net.minecraft.nbt.CompoundTag
 
-class DebugCardData extends ItemData(Constants.ItemName.DebugCard) {
+class DebugCardData extends ItemData(Constants.ItemName.DEBUG_CARD) {
   def this(stack: ItemStack) {
     this()
     loadData(stack)

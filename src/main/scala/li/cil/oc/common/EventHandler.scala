@@ -303,18 +303,18 @@ object EventHandler {
         val persistedData = PlayerUtils.persistedData(player)
         if (!persistedData.getBoolean(Settings.namespace + "receivedManual")) {
           persistedData.putBoolean(Settings.namespace + "receivedManual", true)
-          player.inventory.add(api.Items.get(Constants.ItemName.Manual).createItemStack(1))
+          player.inventory.add(api.Items.get(Constants.ItemName.MANUAL).createItemStack(1))
         }
       case _ =>
     }
   }
 
-  lazy val drone = api.Items.get(Constants.ItemName.Drone)
+  lazy val drone = api.Items.get(Constants.ItemName.DRONE)
   lazy val eeprom = api.Items.get(Constants.ItemName.EEPROM)
-  lazy val mcu = api.Items.get(Constants.BlockName.Microcontroller)
-  lazy val navigationUpgrade = api.Items.get(Constants.ItemName.NavigationUpgrade)
-  lazy val robot = api.Items.get(Constants.BlockName.Robot)
-  lazy val tablet = api.Items.get(Constants.ItemName.Tablet)
+  lazy val mcu = api.Items.get(Constants.BlockName.MICROCONTROLLER)
+  lazy val navigationUpgrade = api.Items.get(Constants.ItemName.NAVIGATION_UPGRADE)
+  lazy val robot = api.Items.get(Constants.BlockName.ROBOT)
+  lazy val tablet = api.Items.get(Constants.ItemName.TABLET)
 
   @SubscribeEvent
   def onCrafting(e: ItemCraftedEvent) = {
@@ -356,7 +356,7 @@ object EventHandler {
         if (Settings.get.presentChance > 0 && !didRecraft && api.Items.get(e.getCrafting) != null &&
           e.getPlayer.getRandom.nextFloat() < Settings.get.presentChance && timeForPresents) {
           // Presents!
-          val present = api.Items.get(Constants.ItemName.Present).createItemStack(1)
+          val present = api.Items.get(Constants.ItemName.PRESENT).createItemStack(1)
           e.getPlayer.level.playSound(e.getPlayer, e.getPlayer.getX, e.getPlayer.getY, e.getPlayer.getZ, SoundEvents.NOTE_BLOCK_PLING, SoundSource.MASTER, 0.2f, 1f)
           InventoryUtils.addToPlayerInventory(present, e.getPlayer)
         }

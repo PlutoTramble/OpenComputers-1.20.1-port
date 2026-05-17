@@ -49,7 +49,7 @@ class DiskDrive(selfType: BlockEntityType[_ <: DiskDrive], pos: BlockPos, state:
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Disk,
     DeviceAttribute.Description -> "Floppy disk drive",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Spinner 520p1"
   )
 

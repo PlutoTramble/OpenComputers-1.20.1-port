@@ -23,7 +23,7 @@ class UpgradeCrafting(val host: EnvironmentHost with internal.Robot) extends Abs
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Assembly controller",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "MultiCombinator-9S"
   )
 

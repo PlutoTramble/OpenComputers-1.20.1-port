@@ -30,7 +30,7 @@ object Redstone {
     private final lazy val deviceInfo = Map(
       DeviceAttribute.Class -> DeviceClass.Communication,
       DeviceAttribute.Description -> "Combined redstone controller",
-      DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+      DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
       DeviceAttribute.Product -> "Rx900-M",
       DeviceAttribute.Capacity -> "65536",
       DeviceAttribute.Width -> "16"

@@ -18,15 +18,15 @@ import scala.collection.mutable
 abstract class Template {
   protected val suggestedComponents = Array(
     "BIOS" -> hasComponent(Constants.ItemName.EEPROM) _,
-    "Screen" -> hasComponent(Constants.BlockName.ScreenTier1) _,
-    "Keyboard" -> hasComponent(Constants.BlockName.Keyboard) _,
+    "Screen" -> hasComponent(Constants.BlockName.SCREEN_TIER_1) _,
+    "Keyboard" -> hasComponent(Constants.BlockName.KEYBOARD) _,
     "GraphicsCard" -> ((inventory: Container) => Array(
-      Constants.ItemName.APUCreative,
-      Constants.ItemName.APUTier1,
-      Constants.ItemName.APUTier2,
-      Constants.ItemName.GraphicsCardTier1,
-      Constants.ItemName.GraphicsCardTier2,
-      Constants.ItemName.GraphicsCardTier3).
+      Constants.ItemName.APU_CREATIVE,
+      Constants.ItemName.APU_TIER_1,
+      Constants.ItemName.APU_TIER_2,
+      Constants.ItemName.GRAPHICS_CARD_TIER_1,
+      Constants.ItemName.GRAPHICS_CARD_TIER_2,
+      Constants.ItemName.GRAPHICS_CARD_TIER_3).
       exists(name => hasComponent(name)(inventory))),
     "Inventory" -> hasInventory _,
     "OS" -> hasFileSystem _)

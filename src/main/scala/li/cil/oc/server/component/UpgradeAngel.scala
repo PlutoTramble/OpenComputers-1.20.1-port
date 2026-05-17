@@ -24,7 +24,7 @@ class UpgradeAngel extends AbstractManagedEnvironment with DeviceInfo {
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Angel upgrade",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "FreePlacer (TM)",
     DeviceAttribute.Capacity -> Settings.get.maxNetworkPacketSize.toString
   )

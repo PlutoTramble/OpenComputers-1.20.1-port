@@ -26,26 +26,26 @@ import scala.collection.convert.ImplicitConversionsToScala._
 import scala.collection.mutable
 
 object ModelInitialization {
-  final val CableBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.Cable, "")
-  final val CableItemLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.Cable, "inventory")
-  final val NetSplitterBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.NetSplitter, "")
-  final val NetSplitterItemLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.NetSplitter, "inventory")
-  final val PrintBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.Print, "")
-  final val PrintItemLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.Print, "inventory")
-  final val RobotBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.Robot, "")
-  final val RobotItemLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.Robot, "inventory")
-  final val RobotAfterimageBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.RobotAfterimage, "")
-  final val RackBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.Rack, "")
+  final val CableBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.CABLE, "")
+  final val CableItemLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.CABLE, "inventory")
+  final val NetSplitterBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.NET_SPLITTER, "")
+  final val NetSplitterItemLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.NET_SPLITTER, "inventory")
+  final val PrintBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.PRINT, "")
+  final val PrintItemLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.PRINT, "inventory")
+  final val RobotBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.ROBOT, "")
+  final val RobotItemLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.ROBOT, "inventory")
+  final val RobotAfterimageBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.ROBOT_AFTER_IMAGE, "")
+  final val RackBlockLocation = new ModelResourceLocation(Settings.resourceDomain + ":" + Constants.BlockName.RACK, "")
 
   private val meshableItems = mutable.ArrayBuffer.empty[Item]
   private val modelRemappings = mutable.Map.empty[ModelResourceLocation, ModelResourceLocation]
 
   def preInit(): Unit = {
-    registerModel(Constants.BlockName.Cable, CableBlockLocation, CableItemLocation)
-    registerModel(Constants.BlockName.NetSplitter, NetSplitterBlockLocation, NetSplitterItemLocation)
-    registerModel(Constants.BlockName.Print, PrintBlockLocation, PrintItemLocation)
-    registerModel(Constants.BlockName.Robot, RobotBlockLocation, RobotItemLocation)
-    registerModel(Constants.BlockName.RobotAfterimage, RobotAfterimageBlockLocation, null)
+    registerModel(Constants.BlockName.CABLE, CableBlockLocation, CableItemLocation)
+    registerModel(Constants.BlockName.NET_SPLITTER, NetSplitterBlockLocation, NetSplitterItemLocation)
+    registerModel(Constants.BlockName.PRINT, PrintBlockLocation, PrintItemLocation)
+    registerModel(Constants.BlockName.ROBOT, RobotBlockLocation, RobotItemLocation)
+    registerModel(Constants.BlockName.ROBOT_AFTER_IMAGE, RobotAfterimageBlockLocation, null)
   }
 
   @SubscribeEvent
@@ -147,10 +147,10 @@ object ModelInitialization {
     meshableItems.clear()
 
     val modelOverrides = Map[String, BakedModel => BakedModel](
-      Constants.BlockName.ScreenTier1 -> (_ => ScreenModel),
-      Constants.BlockName.ScreenTier2 -> (_ => ScreenModel),
-      Constants.BlockName.ScreenTier3 -> (_ => ScreenModel),
-      Constants.BlockName.Rack -> (parent => new ServerRackModel(parent))
+      Constants.BlockName.SCREEN_TIER_1 -> (_ => ScreenModel),
+      Constants.BlockName.SCREEN_TIER_2 -> (_ => ScreenModel),
+      Constants.BlockName.SCREEN_TIER_3 -> (_ => ScreenModel),
+      Constants.BlockName.RACK -> (parent => new ServerRackModel(parent))
     )
 
     registry.keySet.toArray.foreach {

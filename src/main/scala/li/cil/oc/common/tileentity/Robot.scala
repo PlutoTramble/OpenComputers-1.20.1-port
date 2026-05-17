@@ -229,8 +229,8 @@ class Robot(state: BlockState, pos: BlockPos) extends BlockEntity(BlockEntityTyp
       if (event.isCanceled) return false
     }
 
-    val blockRobotProxy = api.Items.get(Constants.BlockName.Robot).block.asInstanceOf[common.block.RobotProxy]
-    val blockRobotAfterImage = api.Items.get(Constants.BlockName.RobotAfterimage).block.asInstanceOf[common.block.RobotAfterimage]
+    val blockRobotProxy = api.Items.get(Constants.BlockName.ROBOT).block.asInstanceOf[common.block.RobotProxy]
+    val blockRobotAfterImage = api.Items.get(Constants.BlockName.ROBOT_AFTER_IMAGE).block.asInstanceOf[common.block.RobotAfterimage]
     val wasAir = getLevel.isEmptyBlock(newPosition)
     val state = getLevel.getBlockState(newPosition)
     val block = state.getBlock

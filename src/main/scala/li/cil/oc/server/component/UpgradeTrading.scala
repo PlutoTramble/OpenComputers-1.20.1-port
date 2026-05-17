@@ -33,7 +33,7 @@ class UpgradeTrading(val host: EnvironmentHost) extends AbstractManagedEnvironme
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Trading upgrade",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Capitalism H.O. 1200T"
   )
 

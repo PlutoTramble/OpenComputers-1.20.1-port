@@ -21,7 +21,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
 
 object Analyzer {
-  private lazy val analyzer = api.Items.get(Constants.ItemName.Analyzer)
+  private lazy val analyzer = api.Items.get(Constants.ItemName.ANALYZER)
 
   @SubscribeEvent
   def onInteract(e: PlayerInteractEvent.EntityInteract): Unit = {

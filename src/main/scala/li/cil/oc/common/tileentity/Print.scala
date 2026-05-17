@@ -63,7 +63,7 @@ class Print(selfType: BlockEntityType[_ <: Print], val canToggle: Option[() => B
       getLevel.sendBlockUpdated(getBlockPos, getLevel.getBlockState(getBlockPos), getLevel.getBlockState(getBlockPos), 3)
       updateRedstone()
       if (state && data.isButtonMode) {
-        val block = api.Items.get(Constants.BlockName.Print).block().asInstanceOf[PrintBlock]
+        val block = api.Items.get(Constants.BlockName.PRINT).block().asInstanceOf[PrintBlock]
         val delay = block.tickRate(getLevel)
         scheduleUpdate match {
           case Some(callback) => callback(delay)

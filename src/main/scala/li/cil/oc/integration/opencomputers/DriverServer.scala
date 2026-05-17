@@ -13,10 +13,10 @@ import net.minecraft.nbt.CompoundTag
 
 object DriverServer extends Item with HostAware {
   override def worksWith(stack: ItemStack): Boolean = isOneOf(stack,
-    api.Items.get(Constants.ItemName.ServerTier1),
-    api.Items.get(Constants.ItemName.ServerTier2),
-    api.Items.get(Constants.ItemName.ServerTier3),
-    api.Items.get(Constants.ItemName.ServerCreative))
+    api.Items.get(Constants.ItemName.SERVER_TIER_1),
+    api.Items.get(Constants.ItemName.SERVER_TIER_2),
+    api.Items.get(Constants.ItemName.SERVER_TIER_3),
+    api.Items.get(Constants.ItemName.SERVER_CREATIVE))
 
   override def createEnvironment(stack: ItemStack, host: EnvironmentHost): ManagedEnvironment = host match {
     case rack: api.internal.Rack => new component.Server(rack, rack.indexOf(stack))

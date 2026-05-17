@@ -1,8 +1,6 @@
 package li.cil.oc.common.template
 
-import li.cil.oc.Constants
-import li.cil.oc.Settings
-import li.cil.oc.api
+import li.cil.oc.{Constants, SConstants, Settings, api}
 import li.cil.oc.api.internal
 import li.cil.oc.api.internal.Microcontroller
 import li.cil.oc.common.Slot
@@ -21,11 +19,11 @@ object MicrocontrollerTemplate extends Template {
 
   override protected def hostClass: Class[Microcontroller] = classOf[internal.Microcontroller]
 
-  def selectTier1(stack: ItemStack): Boolean = api.Items.get(stack) == api.Items.get(Constants.ItemName.MicrocontrollerCaseTier1)
+  def selectTier1(stack: ItemStack): Boolean = api.Items.get(stack) == api.Items.get(Constants.ItemName.MICROCONTROLLER_CASE_TIER_1)
 
-  def selectTier2(stack: ItemStack): Boolean = api.Items.get(stack) == api.Items.get(Constants.ItemName.MicrocontrollerCaseTier2)
+  def selectTier2(stack: ItemStack): Boolean = api.Items.get(stack) == api.Items.get(Constants.ItemName.MICROCONTROLLER_CASE_TIER_2)
 
-  def selectTierCreative(stack: ItemStack): Boolean = api.Items.get(stack) == api.Items.get(Constants.ItemName.MicrocontrollerCaseCreative)
+  def selectTierCreative(stack: ItemStack): Boolean = api.Items.get(stack) == api.Items.get(Constants.ItemName.MICROCONTROLLER_CASE_CREATIVE)
 
   def validate(inventory: Container): Array[AnyRef] = validateComputer(inventory)
 
@@ -41,11 +39,11 @@ object MicrocontrollerTemplate extends Template {
     Array(stack, Double.box(energy))
   }
 
-  def selectDisassembler(stack: ItemStack): Boolean = api.Items.get(stack) == api.Items.get(Constants.BlockName.Microcontroller)
+  def selectDisassembler(stack: ItemStack): Boolean = api.Items.get(stack) == api.Items.get(Constants.BlockName.MICROCONTROLLER)
 
   def disassemble(stack: ItemStack, ingredients: Array[ItemStack]): Array[ItemStack] = {
     val info = new MicrocontrollerData(stack)
-    val itemName = Constants.ItemName.MicrocontrollerCase(info.tier)
+    val itemName = SConstants.ItemName.MicrocontrollerCase(info.tier)
 
     Array(api.Items.get(itemName).createItemStack(1)) ++ info.components
   }

@@ -63,7 +63,7 @@ class Disassembler(selfType: BlockEntityType[_ <: Disassembler], pos: BlockPos, 
   private final lazy val deviceInfo = Map(
     DeviceAttribute.Class -> DeviceClass.Generic,
     DeviceAttribute.Description -> "Disassembler",
-    DeviceAttribute.Vendor -> Constants.DeviceInfo.DefaultVendor,
+    DeviceAttribute.Vendor -> Constants.DeviceInfo.DEFAULT_VENDOR,
     DeviceAttribute.Product -> "Break.3R-100"
   )
 
